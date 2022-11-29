@@ -28,10 +28,6 @@ const initLive2 = () => {
 onMounted(initLive2)
 </script>
 
-<template>
-  <!-- Live 2d -->
-</template>
-
 <style>
 @media screen and (max-width: 639px) {
   #waifu {
