@@ -1,7 +1,12 @@
-<script setup>
-import BlogList from './components/BlogList.vue'
-</script>
+---
+layout: home
+title: zhixiang yao
 
-Blog List
-
-<BlogList />
+hero:
+  name: Personal Blog
+  tagline: making...
+  actions:
+    - theme: brand
+      text: View Blog List
+      link: /list
+---

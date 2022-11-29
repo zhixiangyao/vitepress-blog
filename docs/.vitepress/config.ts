@@ -23,7 +23,7 @@ function nav(): Nav {
   return [
     {
       text: 'Notes',
-      link: '/notes/typescript/Type-challenge',
+      link: '/notes/typescript/type-challenge',
     },
     {
       text: 'Tips',
@@ -41,7 +41,7 @@ function sidebar(): Sidebar {
       {
         text: 'TypeScript',
         collapsible: true,
-        items: [{ text: 'Type Challenge', link: '/notes/typescript/Type-challenge' }],
+        items: [{ text: 'Type Challenge', link: '/notes/typescript/type-challenge' }],
       },
       {
         text: 'Linux',
