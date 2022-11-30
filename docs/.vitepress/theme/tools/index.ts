@@ -1,4 +1,4 @@
-function loadExternalResource(url, type) {
+function loadExternalResource(url: string, type: 'css' | 'js') {
   return new Promise((resolve, reject) => {
     let tag
 

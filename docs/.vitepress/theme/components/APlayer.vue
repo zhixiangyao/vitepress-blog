@@ -1,10 +1,10 @@
-<script>
+<script lang="ts">
 export default {
   name: 'APlayer',
 }
 </script>
 
-<script setup>
+<script setup lang="ts">
 import { onMounted } from 'vue'
 import { loadExternalResource } from '../tools'
 
@@ -17,7 +17,7 @@ const initAPlayer = () => {
 
   Promise.all([loadExternalResource(url, 'js')]).then(() => {
     const ap = new APlayer({
-      container: document.getElementById('APlayer'),
+      container: document.getElementById('APlayer') as HTMLElement,
       fixed: true,
       volume: 0.2,
       theme: '#1da1f2',
@@ -40,6 +40,7 @@ const initAPlayer = () => {
       ],
     })
     ap.lrc.hide()
+    console.clear()
   })
 }
 

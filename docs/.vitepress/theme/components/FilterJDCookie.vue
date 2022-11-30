@@ -1,10 +1,10 @@
-<script>
+<script lang="ts">
 export default {
   name: 'FilterJDCookie',
 }
 </script>
 
-<script setup>
+<script setup lang="ts">
 import { reactive, watch } from 'vue'
 
 const state = reactive({
@@ -13,18 +13,20 @@ const state = reactive({
   msg: '',
 })
 
-const getToken = text => {
+const getToken = (text: string) => {
   const CV = text
-  const CookieValue = CV.match(/pt_pin=.+?;/) + CV.match(/pt_key=.+?;/)
-
+  const pin = CV.match(/pt_pin=.+?;/)?.[0] ?? ''
+  const key = CV.match(/pt_key=.+?;/)?.[0] ?? ''
+  const CookieValue = pin + key ?? ''
   return CookieValue
 }
 
 const filter = () => {
   const cookieValue = getToken(state.cookie)
+
   if (cookieValue) {
     state.filteredJDCookie = encodeURI(cookieValue)
-    window.copy && window.copy(this.filteredJDCookie)
+    window.copy && window.copy(state.filteredJDCookie)
     state.msg = '过滤成功'
   } else {
     state.filteredJDCookie = ''

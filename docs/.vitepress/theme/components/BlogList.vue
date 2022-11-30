@@ -1,4 +1,4 @@
-<script setup>
+<script setup lang="ts">
 import { useData } from 'vitepress'
 import { computed } from 'vue'
 
@@ -6,7 +6,7 @@ const { theme } = useData()
 
 const list = computed(() => {
   const temp = []
-  const sidebars = Object.values(theme.value.sidebar)
+  const sidebars = Object.values(theme.value.sidebar) as any
 
   for (const sidebar of sidebars) {
     for (const { items } of sidebar) {

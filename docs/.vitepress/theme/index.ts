@@ -1,10 +1,12 @@
 import DefaultTheme from 'vitepress/theme'
 
+type Theme = typeof DefaultTheme
+
 import Layout from './Layout.vue'
 import FilterJDCookie from './components/FilterJDCookie.vue'
 import BlogList from './components/BlogList.vue'
 
-export default {
+export default <Theme>{
   ...DefaultTheme,
   enhanceApp(ctx) {
     // extend default theme custom Behaviour.
