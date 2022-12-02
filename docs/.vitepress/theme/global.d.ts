@@ -13,7 +13,7 @@ declare global {
         lrc: string
         cover: string
       }[]
-    }) {}
+    })
 
     lrc: {
       hide(): void
