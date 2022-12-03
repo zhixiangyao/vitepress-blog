@@ -10,3 +10,5 @@ hero:
       text: View Blog List
       link: /list
 ---
+
+<Rain />
