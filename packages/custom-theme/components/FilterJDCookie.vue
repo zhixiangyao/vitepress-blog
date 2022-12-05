@@ -36,16 +36,21 @@ const filter = () => {
 
 watch(
   () => state.cookie,
-  cookie => {
+  (cookie) => {
     if (cookie) filter()
-  }
+  },
 )
 </script>
 
 <template>
   <div class="filter-jd-cookie">
     <div>Original Cookie:</div>
-    <textarea v-model="state.cookie" placeholder="请把 cookie 黏贴到这里" cols="30" rows="10"></textarea>
+    <textarea
+      v-model="state.cookie"
+      placeholder="请把 cookie 黏贴到这里"
+      cols="30"
+      rows="10"
+    ></textarea>
     <div>Filtered JD Cookie: {{ state.msg ? ` (${state.msg})` : '' }}:</div>
     <code>{{ state.filteredJDCookie }}</code>
   </div>

@@ -35,7 +35,7 @@ class CancelablePromise {
 ```ts
 // 模拟一个异步请求函数
 const createRequest = (delay: number): (() => Promise<string>) => {
-  return () => new Promise(resolve => setTimeout(() => resolve('done'), delay))
+  return () => new Promise((resolve) => setTimeout(() => resolve('done'), delay))
 }
 
 const cancelPromise = new CancelablePromise()

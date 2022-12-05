@@ -89,12 +89,18 @@ const routes = [
       {
         path: '/',
         exact: true,
-        component: Loadable({ loader: () => import('../view/Home/index'), loading: MyLoadingComponent }),
+        component: Loadable({
+          loader: () => import('../view/Home/index'),
+          loading: MyLoadingComponent,
+        }),
       },
       {
         path: '/about',
         exact: true,
-        component: Loadable({ loader: () => import('../view/About/index'), loading: MyLoadingComponent }),
+        component: Loadable({
+          loader: () => import('../view/About/index'),
+          loading: MyLoadingComponent,
+        }),
       },
       // ...
     ],
@@ -131,12 +137,18 @@ const routes = [
       {
         path: '/',
         exact: true,
-        component: Loadable({ loader: () => import('../view/Home/index'), loading: MyLoadingComponent }),
+        component: Loadable({
+          loader: () => import('../view/Home/index'),
+          loading: MyLoadingComponent,
+        }),
       },
       {
         path: '/about',
         exact: true,
-        component: Loadable({ loader: () => import('../view/About/index'), loading: MyLoadingComponent }),
+        component: Loadable({
+          loader: () => import('../view/About/index'),
+          loading: MyLoadingComponent,
+        }),
       },
       // ...
     ],
@@ -163,7 +175,7 @@ export default function Loadable(
   loader: () => Promise<React.Component>,
   LoadingComponent: React.Component,
   ErrorComponent?: React.Component | null,
-  delay?: number = 200
+  delay?: number = 200,
 ) {
   let prevLoadedComponent = null
 
@@ -188,7 +200,7 @@ export default function Loadable(
 
       // () => import('./xxx') 执行的返回是promise
       loader()
-        .then(Component => {
+        .then((Component) => {
           // 清除 this._timeoutId 定时器
           this.clearTimeout()
           prevLoadedComponent = Component
@@ -198,7 +210,7 @@ export default function Loadable(
             Component,
           })
         })
-        .catch(error => {
+        .catch((error) => {
           this.clearTimeout()
           this.setState({
             isLoading: false,

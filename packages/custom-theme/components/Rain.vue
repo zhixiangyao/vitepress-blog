@@ -17,10 +17,12 @@ const initRain = () => {
 
   if (body.height > body.width) {
     // mobile
-    background = 'https://raw.githubusercontent.com/zhixiangyao/CDN/master/images/anime/twitter/2.jpeg'
+    background =
+      'https://raw.githubusercontent.com/zhixiangyao/CDN/master/images/anime/twitter/2.jpeg'
   } else {
     // desktop
-    background = 'https://raw.githubusercontent.com/zhixiangyao/CDN/master/images/anime/fate/999332.png'
+    background =
+      'https://raw.githubusercontent.com/zhixiangyao/CDN/master/images/anime/fate/999332.png'
   }
 
   canvas.width = rect.width
@@ -65,12 +67,12 @@ onMounted(loadRain)
 
 <style>
 #rain {
-  z-index: -1;
   position: fixed;
   top: 0;
-  left: 0;
   right: 0;
   bottom: 0;
+  left: 0;
+  z-index: -1;
   width: 100%;
   height: 100%;
 }
