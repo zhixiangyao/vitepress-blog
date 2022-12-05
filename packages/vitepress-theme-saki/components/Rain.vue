@@ -5,13 +5,17 @@ export default {
 </script>
 
 <script setup lang="ts">
-import { onMounted } from 'vue'
+import { onMounted, reactive, ref } from 'vue'
 import { loadExternalResource } from '../tools'
 
+const canvasRef = ref<HTMLCanvasElement>()
+const state = reactive<{ raindropFx: InstanceType<typeof window.RaindropFX> | null }>({
+  raindropFx: null,
+})
+
 const initRain = () => {
-  const canvas = document.querySelector('#rain')! as HTMLCanvasElement
   const body = document.body.getBoundingClientRect()
-  const rect = canvas.getBoundingClientRect()
+  const rect = canvasRef.value!.getBoundingClientRect()
 
   let background: string
 
@@ -25,22 +29,22 @@ const initRain = () => {
       'https://raw.githubusercontent.com/zhixiangyao/CDN/master/images/anime/fate/999332.png'
   }
 
-  canvas.width = rect.width
-  canvas.height = rect.height
+  canvasRef.value!.width = rect.width
+  canvasRef.value!.height = rect.height
 
   const option = {
-    canvas,
+    canvas: canvasRef.value!,
     background,
   }
 
-  const raindropFx = new window.RaindropFX(option)
+  state.raindropFx = new window.RaindropFX(option)
 
-  self.onresize = () => {
-    const rect = canvas.getBoundingClientRect()
-    raindropFx.resize(rect.width, rect.height)
+  window.onresize = () => {
+    const rect = canvasRef.value!.getBoundingClientRect()
+    state.raindropFx?.resize(rect.width, rect.height)
   }
 
-  raindropFx.start()
+  state.raindropFx.start()
 
   console.info('raindropFx author: SardineFish')
   console.info('GitHub: https://github.com/SardineFish/raindrop-fx')
@@ -62,7 +66,7 @@ onMounted(loadRain)
 </script>
 
 <template>
-  <canvas id="rain"></canvas>
+  <canvas :ref="(e) => (canvasRef = e as HTMLCanvasElement)" id="rain"></canvas>
 </template>
 
 <style>
