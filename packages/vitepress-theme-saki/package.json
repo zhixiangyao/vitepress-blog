@@ -1,5 +1,5 @@
 {
-  "name": "custom-theme",
+  "name": "vitepress-theme-saki",
   "version": "0.1.0",
   "author": "zhixiangyao",
   "main": "index.ts"

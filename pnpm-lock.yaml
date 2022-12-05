@@ -42,11 +42,11 @@ importers:
 
   packages/blog:
     specifiers:
-      custom-theme: workspace:0.1.0
+      vitepress-theme-saki: workspace:0.1.0
     dependencies:
-      custom-theme: link:../custom-theme
+      vitepress-theme-saki: link:../vitepress-theme-saki
 
-  packages/custom-theme:
+  packages/vitepress-theme-saki:
     specifiers: {}
 
 packages:

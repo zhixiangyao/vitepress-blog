@@ -1,1 +1,1 @@
-export { default } from 'custom-theme'
+export { default } from 'vitepress-theme-saki'
