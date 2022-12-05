@@ -1,10 +1,12 @@
 import { defineConfig, type DefaultTheme } from 'vitepress'
 
 export default defineConfig({
+  lang: 'zh',
   title: 'Blog',
   description: 'Personal Blog',
 
   lastUpdated: true,
+  outDir: '../dist',
 
   themeConfig: {
     siteTitle: 'Zhixiang Yao',

@@ -1,20 +1,20 @@
 {
   "name": "vitepress-blog",
-  "version": "1.0.0",
   "description": "Blog",
-  "scripts": {
-    "docs:dev": "vitepress dev docs",
-    "docs:build": "vitepress build docs",
-    "docs:serve": "vitepress serve docs"
-  },
   "keywords": [
+    "blog",
     "vitepress",
-    "blog"
+    "vue",
+    "pnpm"
   ],
   "author": "zhixiangyao",
   "devDependencies": {
     "@algolia/client-search": "^4.14.2",
     "vitepress": "1.0.0-alpha.29",
     "vue": "^3.2.45"
+  },
+  "engines": {
+    "node": ">=16.17.0",
+    "pnpm": ">=7.17.1"
   }
 }

@@ -1,9 +1,7 @@
 {
-  "cSpell.words": [
-    "Behaviour",
-    "frontmatter",
-    "typeof",
-    "vitepress",
-    "waifu"
-  ]
+  "files.exclude": {
+    "**/node_modules": true,
+    "**/pnpm-lock.yaml": true
+  },
+  "cSpell.words": ["Behaviour", "frontmatter", "typeof", "vitepress", "waifu"]
 }
