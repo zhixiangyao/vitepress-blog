@@ -13,7 +13,7 @@ const initRain = () => {
   const body = document.body.getBoundingClientRect()
   const rect = canvas.getBoundingClientRect()
 
-  let background = undefined
+  let background: string
 
   if (body.height > body.width) {
     // mobile
