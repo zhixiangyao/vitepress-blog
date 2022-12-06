@@ -5,12 +5,47 @@ export default {
 </script>
 
 <script setup lang="ts">
-import { onMounted, onBeforeUnmount, ref } from 'vue'
+import { onMounted, onBeforeUnmount, ref, watch } from 'vue'
+import { useData } from 'vitepress'
 import { utf8ToB64, b64ToUtf8 } from '../tools'
 
+const { isDark } = useData()
 const canvasRef = ref<HTMLCanvasElement>()
+let raindropFx: InstanceType<typeof window.RaindropFX>
+const imgPrefix = 'https://raw.githubusercontent.com/zhixiangyao/CDN/master/images'
+const bg = {
+  desktopDark: imgPrefix + '/anime/fate/999332.png',
+  desktopLight: imgPrefix + '/anime/fate/688669.png',
+  mobileDark: imgPrefix + '/anime/twitter/3.jpeg',
+  mobileLight: imgPrefix + '/anime/twitter/2.jpeg',
+}
 
-const useRain = async () => {
+const resizeRain = () => {
+  if (!canvasRef.value) return
+  if (!raindropFx) return
+
+  const rect = canvasRef.value!.getBoundingClientRect()
+  raindropFx.resize(rect.width, rect.height)
+}
+const switchRain = () => {
+  const body = document.body.getBoundingClientRect()
+
+  if (isDark.value) {
+    if (body.height > body.width) {
+      raindropFx.setBackground(bg.mobileDark)
+    } else {
+      raindropFx.setBackground(bg.desktopDark)
+    }
+  } else {
+    if (body.height > body.width) {
+      raindropFx.setBackground(bg.mobileLight)
+    } else {
+      raindropFx.setBackground(bg.desktopLight)
+    }
+  }
+}
+
+const initRain = async () => {
   const key = 'lib_code_raindrop_fx'
   try {
     const code = localStorage.getItem(key)
@@ -32,17 +67,24 @@ const useRain = async () => {
     try {
       const body = document.body.getBoundingClientRect()
       const rect = canvasRef.value!.getBoundingClientRect()
-      const img = 'https://raw.githubusercontent.com/zhixiangyao/CDN/master/images'
 
       canvasRef.value!.width = rect.width
       canvasRef.value!.height = rect.height
 
       let background: string
 
-      if (body.height > body.width) {
-        background = img + '/anime/twitter/2.jpeg'
+      if (isDark.value) {
+        if (body.height > body.width) {
+          background = bg.mobileDark
+        } else {
+          background = bg.desktopDark
+        }
       } else {
-        background = img + '/anime/fate/999332.png'
+        if (body.height > body.width) {
+          background = bg.mobileLight
+        } else {
+          background = bg.desktopLight
+        }
       }
 
       const option = {
@@ -50,19 +92,9 @@ const useRain = async () => {
         background,
       }
 
-      const raindropFx = new window.RaindropFX(option)
+      raindropFx = new window.RaindropFX(option)
 
       raindropFx.start()
-
-      const watchFX = () => {
-        const rect = canvasRef.value!.getBoundingClientRect()
-        raindropFx.resize(rect.width, rect.height)
-      }
-      window.addEventListener('resize', watchFX)
-
-      onBeforeUnmount(() => {
-        window.removeEventListener('resize', watchFX)
-      })
     } catch (error) {
       console.error(error)
     }
@@ -72,7 +104,18 @@ const useRain = async () => {
 }
 
 onMounted(() => {
-  useRain()
+  initRain()
+})
+
+watch(isDark, () => {
+  switchRain()
+})
+
+onMounted(() => {
+  window.addEventListener('resize', resizeRain)
+})
+onBeforeUnmount(() => {
+  window.removeEventListener('resize', resizeRain)
 })
 </script>
 
