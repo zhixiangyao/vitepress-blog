@@ -5,64 +5,75 @@ export default {
 </script>
 
 <script setup lang="ts">
-import { onMounted, reactive, ref } from 'vue'
-import { loadExternalResource } from '../tools'
+import { onMounted, onBeforeUnmount, ref } from 'vue'
+import { utf8ToB64, b64ToUtf8 } from '../tools'
 
 const canvasRef = ref<HTMLCanvasElement>()
-const state = reactive<{ raindropFx: InstanceType<typeof window.RaindropFX> | null }>({
-  raindropFx: null,
+
+const useRain = async () => {
+  const key = 'lib_code_raindrop_fx'
+  try {
+    const code = localStorage.getItem(key)
+
+    if (code === null) {
+      const url = 'https://raw.githubusercontent.com/SardineFish/raindrop-fx/master/bundle/index.js'
+      const res = await fetch(url)
+      const rawCode = await res.text()
+      const ripeCode = rawCode
+        .replace('var RaindropFX', 'window.RaindropFX')
+        .replaceAll('console.log', '')
+
+      localStorage.setItem(key, utf8ToB64(ripeCode))
+      eval(ripeCode)
+    } else {
+      eval(b64ToUtf8(code))
+    }
+
+    try {
+      const body = document.body.getBoundingClientRect()
+      const rect = canvasRef.value!.getBoundingClientRect()
+      const img = 'https://raw.githubusercontent.com/zhixiangyao/CDN/master/images'
+
+      canvasRef.value!.width = rect.width
+      canvasRef.value!.height = rect.height
+
+      let background: string
+
+      if (body.height > body.width) {
+        background = img + '/anime/twitter/2.jpeg'
+      } else {
+        background = img + '/anime/fate/999332.png'
+      }
+
+      const option = {
+        canvas: canvasRef.value!,
+        background,
+      }
+
+      const raindropFx = new window.RaindropFX(option)
+
+      raindropFx.start()
+
+      const watchFX = () => {
+        const rect = canvasRef.value!.getBoundingClientRect()
+        raindropFx.resize(rect.width, rect.height)
+      }
+      window.addEventListener('resize', watchFX)
+
+      onBeforeUnmount(() => {
+        window.removeEventListener('resize', watchFX)
+      })
+    } catch (error) {
+      console.error(error)
+    }
+  } catch (error) {
+    console.error(error)
+  }
+}
+
+onMounted(() => {
+  useRain()
 })
-
-const initRain = () => {
-  const body = document.body.getBoundingClientRect()
-  const rect = canvasRef.value!.getBoundingClientRect()
-
-  let background: string
-
-  if (body.height > body.width) {
-    // mobile
-    background =
-      'https://raw.githubusercontent.com/zhixiangyao/CDN/master/images/anime/twitter/2.jpeg'
-  } else {
-    // desktop
-    background =
-      'https://raw.githubusercontent.com/zhixiangyao/CDN/master/images/anime/fate/999332.png'
-  }
-
-  canvasRef.value!.width = rect.width
-  canvasRef.value!.height = rect.height
-
-  const option = {
-    canvas: canvasRef.value!,
-    background,
-  }
-
-  state.raindropFx = new window.RaindropFX(option)
-
-  window.onresize = () => {
-    const rect = canvasRef.value!.getBoundingClientRect()
-    state.raindropFx?.resize(rect.width, rect.height)
-  }
-
-  state.raindropFx.start()
-
-  console.info('raindropFx author: SardineFish')
-  console.info('GitHub: https://github.com/SardineFish/raindrop-fx')
-}
-
-const loadRain = () => {
-  const url = 'https://yaozhixiang.top/assets/js/RaindropFX.js'
-
-  if (window?.RaindropFX) {
-    initRain()
-  } else {
-    Promise.all([loadExternalResource(url, 'js')]).then(() => {
-      initRain()
-    })
-  }
-}
-
-onMounted(loadRain)
 </script>
 
 <template>

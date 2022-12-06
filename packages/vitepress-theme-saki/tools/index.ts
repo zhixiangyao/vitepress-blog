@@ -18,4 +18,12 @@ function loadExternalResource(url: string, type: 'css' | 'js') {
   })
 }
 
-export { loadExternalResource }
+function utf8ToB64(str: string) {
+  return window.btoa(encodeURIComponent(str))
+}
+
+function b64ToUtf8(str: string) {
+  return decodeURIComponent(window.atob(str))
+}
+
+export { loadExternalResource, utf8ToB64, b64ToUtf8 }
