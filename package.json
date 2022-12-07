@@ -20,7 +20,6 @@
     "lint:stylelint": "stylelint --fix \"packages/**/*.{vue,postcss,css}\" --cache --cache-location node_modules/.cache/stylelint/"
   },
   "devDependencies": {
-    "@algolia/client-search": "^4.14.2",
     "@typescript-eslint/eslint-plugin": "^5.45.1",
     "@typescript-eslint/parser": "^5.45.1",
     "eslint": "^8.29.0",
@@ -37,6 +36,13 @@
     "typescript": "^4.9.3",
     "vitepress": "1.0.0-alpha.30",
     "vue": "^3.2.45"
+  },
+  "pnpm": {
+    "peerDependencyRules": {
+      "ignoreMissing": [
+        "@algolia/client-search"
+      ]
+    }
   },
   "engines": {
     "node": ">=16.17.0",
