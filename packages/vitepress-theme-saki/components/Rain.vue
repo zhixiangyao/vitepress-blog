@@ -124,6 +124,12 @@ onBeforeUnmount(() => {
 </template>
 
 <style>
+@media screen and (max-width: 639px) {
+  #rain {
+    display: none;
+  }
+}
+
 #rain {
   position: fixed;
   top: 0;
