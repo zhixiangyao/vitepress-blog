@@ -78,6 +78,12 @@ function sidebar(): Sidebar {
         collapsed: true,
         items: [{ text: '分析 react-loadable', link: '/notes/react/analyze-react-loadable' }],
       },
+      {
+        text: 'Algolia',
+        collapsible: true,
+        collapsed: true,
+        items: [{ text: '配置 Vitepress 的 Algolia 搜索', link: '/notes/algolia/config-vitepress-algolia-search' }],
+      },
     ],
     '/tips/': [
       {
