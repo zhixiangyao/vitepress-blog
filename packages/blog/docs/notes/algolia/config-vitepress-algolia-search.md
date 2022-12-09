@@ -4,6 +4,7 @@
 
 ## 前置条件
 
+- 注册 `algolia` 的账号
 - `intel` 或者 `amd` 的 `x86-64` 处理器 (`Apple` 的 `M1` 试过了不行)
 - [jq](https://stedolan.github.io/jq/) 是一个 轻量级 和 灵活 的命令行 `JSON` 工具
   ```sh
@@ -35,7 +36,7 @@
 
   ```json
   {
-    "index_name": "你的 algolia 的 index 名",
+    "index_name": "你的 algolia 的 index 名，随便起",
     "start_urls": ["https://需要爬虫的 blog 网页地址.com"],
     "selectors": {
       "lvl0": "",
@@ -60,4 +61,23 @@
 
 ```sh
 docker run -it --env-file=/root/algolia/.env -e "CONFIG=$(cat /root/algolia/config.json | jq -r tostring)" algolia/docsearch-scraper
+```
+
+## vitepress
+
+`.vitepress/config.js`
+
+```js
+import { defineConfig } from 'vitepress'
+
+export default defineConfig({
+  themeConfig: {
+    // ...
+    algolia: {
+      appId: 'Algolia 应用程序的 ID，随便起',
+      apiKey: '只有读能力的 Api Key',
+      indexName: '你的 algolia 的 index 名',
+    },
+  },
+})
 ```
