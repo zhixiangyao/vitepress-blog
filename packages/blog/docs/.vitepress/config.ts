@@ -28,6 +28,10 @@ type Nav = DefaultTheme.Config['nav']
 function nav(): Nav {
   return [
     {
+      text: 'Moments',
+      link: '/moments/空は高く風は歌う',
+    },
+    {
       text: 'Notes',
       link: '/notes/javascript/es6-class-extends-mock',
     },
@@ -43,6 +47,12 @@ type Sidebar = DefaultTheme.Config['sidebar']
 
 function sidebar(): Sidebar {
   return {
+    '/moments/': [
+      {
+        collapsed: true,
+        items: [{ text: '空は高く風は歌う', link: '/moments/空は高く風は歌う' }],
+      },
+    ],
     '/notes/': [
       {
         text: 'JavaScript',
@@ -82,7 +92,12 @@ function sidebar(): Sidebar {
         text: 'Algolia',
         collapsible: true,
         collapsed: true,
-        items: [{ text: '配置 Vitepress 的 Algolia 搜索', link: '/notes/algolia/config-vitepress-algolia-search' }],
+        items: [
+          {
+            text: '配置 Vitepress 的 Algolia 搜索',
+            link: '/notes/algolia/config-vitepress-algolia-search',
+          },
+        ],
       },
     ],
     '/tips/': [
