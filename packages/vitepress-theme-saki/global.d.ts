@@ -63,6 +63,7 @@ declare global {
     copy(e: string): void
     initWidget(options: { waifuPath: string; apiPath: string; cdnPath?: string }): unknown
     RaindropFX: typeof RaindropFX
+    dataLayer: any[]
   }
 }
 

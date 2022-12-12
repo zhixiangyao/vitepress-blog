@@ -3,6 +3,7 @@ import DefaultTheme from 'vitepress/theme'
 
 import Live2d from './components/Live2d.vue'
 import NProgress from './components/NProgress.vue'
+import GoogleTag from './components/GoogleTag.vue'
 
 const { Layout } = DefaultTheme
 </script>
@@ -10,6 +11,7 @@ const { Layout } = DefaultTheme
 <template>
   <Live2d />
   <NProgress />
+  <GoogleTag />
 
   <Layout />
 </template>
