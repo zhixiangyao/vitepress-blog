@@ -7,7 +7,7 @@ export default {
 <script setup lang="ts">
 import { onMounted, onBeforeUnmount, ref, watch } from 'vue'
 import { useData } from 'vitepress'
-import { utf8ToB64, b64ToUtf8 } from '../tools'
+import { loadExternalResource } from '../tools'
 
 const { isDark } = useData()
 const canvasRef = ref<HTMLCanvasElement>()
@@ -19,6 +19,7 @@ const bg = {
   mobileDark: imgPrefix + '/anime/twitter/3.jpeg',
   mobileLight: imgPrefix + '/anime/twitter/2.jpeg',
 }
+const url = 'https://yaozhixiang.top/assets/js/RaindropFX.js'
 
 const resizeRain = () => {
   if (!canvasRef.value) return
@@ -28,6 +29,7 @@ const resizeRain = () => {
   raindropFx.resize(rect.width, rect.height)
 }
 const switchRain = () => {
+  if (!raindropFx) return
   const body = document.body.getBoundingClientRect()
 
   if (isDark.value) {
@@ -45,25 +47,14 @@ const switchRain = () => {
   }
 }
 
+const presetRain = (url: string) => {
+  Object.defineProperty(window, 'RaindropFX', { value: null, writable: true, configurable: true })
+  const scriptElement = document.querySelector(`[src="${url}"]`)
+
+  scriptElement?.remove()
+}
 const initRain = async () => {
-  const key = 'lib_code_raindrop_fx'
   try {
-    const code = localStorage.getItem(key)
-
-    if (code === null) {
-      const url = 'https://raw.githubusercontent.com/SardineFish/raindrop-fx/master/bundle/index.js'
-      const res = await fetch(url)
-      const rawCode = await res.text()
-      const ripeCode = rawCode
-        .replace('var RaindropFX', 'window.RaindropFX')
-        .replaceAll('console.log', '')
-
-      localStorage.setItem(key, utf8ToB64(ripeCode))
-      eval(ripeCode)
-    } else {
-      eval(b64ToUtf8(code))
-    }
-
     try {
       const body = document.body.getBoundingClientRect()
       const rect = canvasRef.value!.getBoundingClientRect()
@@ -104,7 +95,11 @@ const initRain = async () => {
 }
 
 onMounted(() => {
-  initRain()
+  presetRain(url)
+
+  loadExternalResource(url, 'js').then(() => {
+    initRain()
+  })
 })
 
 watch(isDark, () => {
