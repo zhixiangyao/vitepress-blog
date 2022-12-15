@@ -1,8 +1,8 @@
 # 类型挑战
 
 <!-- prettier-ignore-start -->
-::: 
-  info 什么？ `TypeScript` 你还不会？ 你 out 啦，快来做类型体操吧。 
+::: info
+什么？ `TypeScript` 你还不会？ 你 out 啦，快来做类型体操吧。 
 :::
 <!-- prettier-ignore-end -->
 
