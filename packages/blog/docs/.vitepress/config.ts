@@ -65,6 +65,15 @@ function sidebar(): Sidebar {
         ],
       },
       {
+        text: 'Css',
+        collapsible: true,
+        collapsed: true,
+        items: [
+          { text: 'Grid 布局教程', link: '/notes/css/grid-layout-tutorial' },
+          { text: 'Flex 布局教程', link: '/notes/css/flex-layout-tutorial' },
+        ],
+      },
+      {
         text: 'TypeScript',
         collapsible: true,
         collapsed: true,
