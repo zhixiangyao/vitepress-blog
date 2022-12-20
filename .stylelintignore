@@ -4,3 +4,4 @@ public
 .vscode
 node_modules
 *.ts
+.vite

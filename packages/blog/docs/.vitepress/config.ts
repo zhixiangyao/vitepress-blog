@@ -16,6 +16,9 @@ export default defineConfig({
     ],
     nav: nav(),
     sidebar: sidebar(),
+    footer: {
+      copyright: '2019-present Zhixiang Yao',
+    },
     algolia: {
       appId: 'DM7KLUW505',
       apiKey: '74549704763205291f0582f7786cf183',

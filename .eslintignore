@@ -13,3 +13,4 @@ dist
 dist-ssr
 public
 docs
+.vite
