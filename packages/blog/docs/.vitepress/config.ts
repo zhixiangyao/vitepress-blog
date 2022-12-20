@@ -6,6 +6,7 @@ export default defineConfig({
   description: 'Personal Blog',
   lastUpdated: true,
   outDir: '../dist',
+  cacheDir: './.vitepress/.vite',
 
   themeConfig: {
     siteTitle: 'Zhixiang Yao',
