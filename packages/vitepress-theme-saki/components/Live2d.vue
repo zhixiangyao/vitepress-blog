@@ -42,5 +42,8 @@ onMounted(initLive2)
 #waifu {
   right: 0;
   left: initial !important;
+
+  /* fix */
+  z-index: 100 !important;
 }
 </style>
