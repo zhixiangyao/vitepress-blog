@@ -69,6 +69,24 @@ function sidebar(): Sidebar {
         ],
       },
       {
+        text: 'TypeScript',
+        collapsible: true,
+        collapsed: true,
+        items: [{ text: 'Type Challenge', link: '/notes/typescript/type-challenge' }],
+      },
+      {
+        text: 'Vue',
+        collapsible: true,
+        collapsed: true,
+        items: [{ text: 'Vue2-生命周期基础知识', link: '/notes/vue/vue2-lifecycle-basics' }],
+      },
+      {
+        text: 'React',
+        collapsible: true,
+        collapsed: true,
+        items: [{ text: '分析 react-loadable', link: '/notes/react/analyze-react-loadable' }],
+      },
+      {
         text: 'Css',
         collapsible: true,
         collapsed: true,
@@ -77,12 +95,6 @@ function sidebar(): Sidebar {
           { text: 'Grid 布局教程', link: '/notes/css/grid-layout-tutorial' },
           { text: 'Flex 布局教程', link: '/notes/css/flex-layout-tutorial' },
         ],
-      },
-      {
-        text: 'TypeScript',
-        collapsible: true,
-        collapsed: true,
-        items: [{ text: 'Type Challenge', link: '/notes/typescript/type-challenge' }],
       },
       {
         text: 'Linux',
@@ -95,12 +107,6 @@ function sidebar(): Sidebar {
         collapsible: true,
         collapsed: true,
         items: [{ text: 'Git 常用命令', link: '/notes/git/git-common-commands' }],
-      },
-      {
-        text: 'React',
-        collapsible: true,
-        collapsed: true,
-        items: [{ text: '分析 react-loadable', link: '/notes/react/analyze-react-loadable' }],
       },
       {
         text: 'Algolia',
