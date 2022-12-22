@@ -78,7 +78,10 @@ function sidebar(): Sidebar {
         text: 'Vue',
         collapsible: true,
         collapsed: true,
-        items: [{ text: 'Vue2-生命周期基础知识', link: '/notes/vue/vue2-lifecycle-basics' }],
+        items: [
+          { text: 'Vue2-生命周期基础知识', link: '/notes/vue/vue2-lifecycle-basics' },
+          { text: 'Vue2-生命周期源码解析', link: '/notes/vue/vue2-lifecycle-source-code-parsing' },
+        ],
       },
       {
         text: 'React',
