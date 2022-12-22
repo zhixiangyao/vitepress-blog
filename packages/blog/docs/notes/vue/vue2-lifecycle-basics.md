@@ -4,6 +4,7 @@
 
 <!-- prettier-ignore-start -->
 ::: tip Vue2 生命周期的八个阶段:
+
 - beforeCreate
 - created
 - beforeMount
@@ -12,6 +13,7 @@
 - updated
 - beforeDestroy
 - destroyed
+
 :::
 <!-- prettier-ignore-end -->
 
