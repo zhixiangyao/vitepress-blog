@@ -82,6 +82,7 @@ function sidebar(): Sidebar {
           { text: 'Vue2-生命周期基础知识', link: '/notes/vue/vue2-lifecycle-basics' },
           { text: 'Vue2-生命周期源码解析', link: '/notes/vue/vue2-lifecycle-source-code-parsing' },
           { text: 'Vue2-数据观察更新原理', link: '/notes/vue/vue2-data-observer-principle' },
+          { text: 'Vue3-常用内置指令转 jsx 写法', link: '/notes/vue/Vue3-built-in-instructions-transform-jsx' },
         ],
       },
       {
