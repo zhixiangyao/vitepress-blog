@@ -54,7 +54,10 @@ function sidebar(): Sidebar {
     '/moments/': [
       {
         collapsed: true,
-        items: [{ text: '空は高く風は歌う', link: '/moments/空は高く風は歌う' }],
+        items: [
+          { text: '空は高く風は歌う', link: '/moments/空は高く風は歌う' },
+          { text: '2023 新年快乐！', link: '/moments/2023-01-01' },
+        ],
       },
     ],
     '/notes/': [
@@ -82,7 +85,10 @@ function sidebar(): Sidebar {
           { text: 'Vue2-生命周期基础知识', link: '/notes/vue/vue2-lifecycle-basics' },
           { text: 'Vue2-生命周期源码解析', link: '/notes/vue/vue2-lifecycle-source-code-parsing' },
           { text: 'Vue2-数据观察更新原理', link: '/notes/vue/vue2-data-observer-principle' },
-          { text: 'Vue3-常用内置指令转 jsx 写法', link: '/notes/vue/Vue3-built-in-instructions-transform-jsx' },
+          {
+            text: 'Vue3-常用内置指令转 jsx 写法',
+            link: '/notes/vue/Vue3-built-in-instructions-transform-jsx',
+          },
           { text: 'Vue3-toRefs 源码分析', link: '/notes/vue/vue3-to-refs-source-code-parsing' },
         ],
       },
