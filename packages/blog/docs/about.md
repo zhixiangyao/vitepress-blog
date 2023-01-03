@@ -2,12 +2,13 @@
 
 👋 Hello! I'm Yáo Zhi Xiang (In China, the order is different, Yáo is my last name, zhì xiáng is my first name.)
 
-## 📜 Target
+![visitors](https://visitor-badge.glitch.me/badge?page_id=zhixiangyao.blog&left_color=green&right_color=red)
+
+### 📜 Target
 
 - 🚶 The first step is as good as half over
-- 🚀 2022 Goals:
+- 🚀 2023 Goals:
   - Learn English
-  - LeetCode
   - TypeScript
   - Vue 3.x
   - React 18.x
@@ -18,10 +19,10 @@
   - Dota2 & Apex
   - Work out
 
-## 📜 Project
+### 📜 Project
 
 - ⚡️ [vite-react-ts-starter](https://github.com/zhixiangyao/vite-react-ts-starter) (react 18.2 + react-router 6.0 +)
-- ⚡️ [vite-react-ts-antd-starter](https://github.com/zhixiangyao/vite-react-ts-antd-starter) (react 18.0 + react-router 6.0 +)
+- ⚡️ [vite-react-ts-antd-starter](https://github.com/zhixiangyao/vite-react-ts-antd-starter) (react 18.2 + react-router 6.0 +)
 - ⚡️ [vite-vue-markdown-ssg-starter](https://github.com/zhixiangyao/vite-vue-markdown-ssg-starter) (vue 3.2 +)
 - ⚡️ [vite-vue-ts-starter](https://github.com/zhixiangyao/vite-vue-ts-starter) (vue 3.2 +)
 - ⚡️ [vite-vue-ts-monorepo-starter](https://github.com/zhixiangyao/vite-vue-ts-monorepo-starter) (monorepo vue 3.2 +)
@@ -30,6 +31,6 @@
 
 - 💻 [Hackintosh-B460M-MORTAR-i5-10400-RX5700-4K](https://github.com/zhixiangyao/Hackintosh-B460M-MORTAR-i5-10400-RX5700-4K)
 
-## 🐈‍⬛ Github Stats
+### 🐈‍⬛ Github Stats
 
 <img alt="zhixiangyao's GitHub Stats" src="https://github-readme-stats.vercel.app/api?username=zhixiangyao&theme=cobalt&show_icons=true" />
