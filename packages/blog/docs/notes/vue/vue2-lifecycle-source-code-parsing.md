@@ -11,7 +11,7 @@
 ```js
 /* @flow */
 // 回调钩子
-export function callHook (vm: Component, hook: string) {
+export function callHook(vm: Component, hook: string) {
   // #7573 disable dep collection when invoking lifecycle hooks
   pushTarget()
   const handlers = vm.$options[hook]
@@ -33,19 +33,19 @@ export function callHook (vm: Component, hook: string) {
 ```js
 /* @flow */
 // 调用错误处理
-export function invokeWithErrorHandling (
+export function invokeWithErrorHandling(
   handler: Function,
   context: any,
   args: null | any[],
   vm: any,
-  info: string
+  info: string,
 ) {
   let res
   try {
     // 这里 通过apply和call绑定this
     res = args ? handler.apply(context, args) : handler.call(context)
     if (res && !res._isVue && isPromise(res) && !res._handled) {
-      res.catch(e => handleError(e, vm, info + ` (Promise/async)`))
+      res.catch((e) => handleError(e, vm, info + ` (Promise/async)`))
       // issue #9511
       // avoid catch triggering multiple times when nested calls
       res._handled = true
@@ -70,7 +70,7 @@ export function invokeWithErrorHandling (
 /* @flow */
 
 // 初始化混入
-export function initMixin (Vue: Class<Component>) {
+export function initMixin(Vue: Class<Component>) {
   Vue.prototype._init = function (options?: Object) {
     const vm: Component = this
     // a uid
@@ -88,11 +88,7 @@ export function initMixin (Vue: Class<Component>) {
       // 内部组件选项需要特殊处理。
       initInternalComponent(vm, options)
     } else {
-      vm.$options = mergeOptions(
-        resolveConstructorOptions(vm.constructor),
-        options || {},
-        vm
-      )
+      vm.$options = mergeOptions(resolveConstructorOptions(vm.constructor), options || {}, vm)
     }
     //...
 
@@ -122,7 +118,7 @@ export function initMixin (Vue: Class<Component>) {
 /* @flow */
 
 // 初始化状态
-export function initState (vm: Component) {
+export function initState(vm: Component) {
   vm._watchers = []
   const opts = vm.$options
   if (opts.props) initProps(vm, opts.props)
@@ -130,7 +126,7 @@ export function initState (vm: Component) {
   if (opts.data) {
     initData(vm)
   } else {
-    observe(vm._data = {}, true /* asRootData */)
+    observe((vm._data = {}), true /* asRootData */)
   }
   if (opts.computed) initComputed(vm, opts.computed)
   if (opts.watch && opts.watch !== nativeWatch) {
@@ -154,11 +150,7 @@ export function initState (vm: Component) {
 // mountComponent 核心就是先实例化一个渲染Watcher
 // 在它的回调函数中会调用 updateComponent 方法
 // 两个核心方法 vm._render(生成虚拟Dom) 和 vm._update(映射到真实Dom)
-export function mountComponent (
-  vm: Component,
-  el: ?Element,
-  hydrating?: boolean
-): Component {
+export function mountComponent(vm: Component, el: ?Element, hydrating?: boolean): Component {
   vm.$el = el
   if (!vm.$options.render) {
     // 如果没有渲染函数，创建一个空的VNode节点
@@ -166,19 +158,19 @@ export function mountComponent (
     // 如果是开发环境
     if (process.env.NODE_ENV !== 'production') {
       /* istanbul ignore if */
-      if ((vm.$options.template && vm.$options.template.charAt(0) !== '#') ||
-        vm.$options.el || el) {
+      if (
+        (vm.$options.template && vm.$options.template.charAt(0) !== '#') ||
+        vm.$options.el ||
+        el
+      ) {
         warn(
           'You are using the runtime-only build of Vue where the template ' +
-          'compiler is not available. Either pre-compile the templates into ' +
-          'render functions, or use the compiler-included build.',
-          vm
+            'compiler is not available. Either pre-compile the templates into ' +
+            'render functions, or use the compiler-included build.',
+          vm,
         )
       } else {
-        warn(
-          'Failed to mount component: template or render function not defined.',
-          vm
-        )
+        warn('Failed to mount component: template or render function not defined.', vm)
       }
     }
   }
@@ -215,13 +207,19 @@ export function mountComponent (
   // we set this to vm._watcher inside the watcher's constructor
   // since the watcher's initial patch may call $forceUpdate (e.g. inside child
   // component's mounted hook), which relies on vm._watcher being already defined
-  new Watcher(vm, updateComponent, noop, {
-    before () {
-      if (vm._isMounted && !vm._isDestroyed) {
-        callHook(vm, 'beforeUpdate')
-      }
-    }
-  } /* options */, true /* isRenderWatcher */)
+  new Watcher(
+    vm,
+    updateComponent,
+    noop,
+    {
+      before() {
+        if (vm._isMounted && !vm._isDestroyed) {
+          callHook(vm, 'beforeUpdate')
+        }
+      },
+    } /* options */,
+    true /* isRenderWatcher */,
+  )
   hydrating = false
 
   // manually mounted instance, call mounted on self
@@ -245,24 +243,26 @@ export function mountComponent (
 ```js
 /* @flow */
 
-export function mountComponent (
-  vm: Component,
-  el: ?Element,
-  hydrating?: boolean
-): Component {
+export function mountComponent(vm: Component, el: ?Element, hydrating?: boolean): Component {
   // ...
 
   // we set this to vm._watcher inside the watcher's constructor
   // since the watcher's initial patch may call $forceUpdate (e.g. inside child
   // component's mounted hook), which relies on vm._watcher being already defined
-  new Watcher(vm, updateComponent, noop, {
-    before () {
-      // 断是否 mouted 完成 并且没有被 destroyed
-      if (vm._isMounted && !vm._isDestroyed) {
-        callHook(vm, 'beforeUpdate')
-      }
-    }
-  } /* options */, true /* isRenderWatcher */)
+  new Watcher(
+    vm,
+    updateComponent,
+    noop,
+    {
+      before() {
+        // 断是否 mouted 完成 并且没有被 destroyed
+        if (vm._isMounted && !vm._isDestroyed) {
+          callHook(vm, 'beforeUpdate')
+        }
+      },
+    } /* options */,
+    true /* isRenderWatcher */,
+  )
   hydrating = false
 
   // ...
@@ -282,12 +282,12 @@ export function mountComponent (
 export default class Watcher {
   // ...
 
-  constructor (
+  constructor(
     vm: Component,
     expOrFn: string | Function,
     cb: Function,
     options?: ?Object,
-    isRenderWatcher?: boolean
+    isRenderWatcher?: boolean,
   ) {
     this.vm = vm
     // 在它的构造函数里会判断 isRenderWatcher，
@@ -309,7 +309,7 @@ export default class Watcher {
 ```js
 /* @flow */
 
-function callUpdatedHooks (queue) {
+function callUpdatedHooks(queue) {
   let i = queue.length
   while (i--) {
     const watcher = queue[i]
@@ -333,46 +333,46 @@ function callUpdatedHooks (queue) {
 /* @flow */
 
 Vue.prototype.$destroy = function () {
-    const vm: Component = this
-    if (vm._isBeingDestroyed) {
-      return
-    }
-    // 调用 beforeDestroy 钩子 此时 vm 内数据还在
-    callHook(vm, 'beforeDestroy')
-    vm._isBeingDestroyed = true
-    // 从父组件中移除自己
-    const parent = vm.$parent
-    if (parent && !parent._isBeingDestroyed && !vm.$options.abstract) {
-      remove(parent.$children, vm)
-    }
-    // 拆除观察员
-    if (vm._watcher) {
-      vm._watcher.teardown()
-    }
-    let i = vm._watchers.length
-    while (i--) {
-      vm._watchers[i].teardown()
-    }
-    // remove reference from data ob
-    // frozen object may not have observer.
-    if (vm._data.__ob__) {
-      vm._data.__ob__.vmCount--
-    }
-    // call the last hook...
-    vm._isDestroyed = true
-    // invoke destroy hooks on current rendered tree
-    vm.__patch__(vm._vnode, null)
-    // 调用 destroyed 钩子 此时 vm 数据消失
-    callHook(vm, 'destroyed')
-    // 关闭所有实例侦听器
-    vm.$off()
-    // remove __vue__ reference
-    if (vm.$el) {
-      vm.$el.__vue__ = null
-    }
-    // release circular reference (#6759)
-    if (vm.$vnode) {
-      vm.$vnode.parent = null
-    }
+  const vm: Component = this
+  if (vm._isBeingDestroyed) {
+    return
   }
+  // 调用 beforeDestroy 钩子 此时 vm 内数据还在
+  callHook(vm, 'beforeDestroy')
+  vm._isBeingDestroyed = true
+  // 从父组件中移除自己
+  const parent = vm.$parent
+  if (parent && !parent._isBeingDestroyed && !vm.$options.abstract) {
+    remove(parent.$children, vm)
+  }
+  // 拆除观察员
+  if (vm._watcher) {
+    vm._watcher.teardown()
+  }
+  let i = vm._watchers.length
+  while (i--) {
+    vm._watchers[i].teardown()
+  }
+  // remove reference from data ob
+  // frozen object may not have observer.
+  if (vm._data.__ob__) {
+    vm._data.__ob__.vmCount--
+  }
+  // call the last hook...
+  vm._isDestroyed = true
+  // invoke destroy hooks on current rendered tree
+  vm.__patch__(vm._vnode, null)
+  // 调用 destroyed 钩子 此时 vm 数据消失
+  callHook(vm, 'destroyed')
+  // 关闭所有实例侦听器
+  vm.$off()
+  // remove __vue__ reference
+  if (vm.$el) {
+    vm.$el.__vue__ = null
+  }
+  // release circular reference (#6759)
+  if (vm.$vnode) {
+    vm.$vnode.parent = null
+  }
+}
 ```

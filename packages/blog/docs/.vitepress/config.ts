@@ -63,7 +63,6 @@ function sidebar(): Sidebar {
     '/notes/': [
       {
         text: 'JavaScript',
-        collapsible: true,
         collapsed: true,
         items: [
           { text: 'ES6 Class 继承模拟', link: '/notes/javascript/es6-class-extends-mock' },
@@ -73,13 +72,11 @@ function sidebar(): Sidebar {
       },
       {
         text: 'TypeScript',
-        collapsible: true,
         collapsed: true,
         items: [{ text: 'Type Challenge', link: '/notes/typescript/type-challenge' }],
       },
       {
         text: 'Vue',
-        collapsible: true,
         collapsed: true,
         items: [
           { text: 'Vue2-生命周期基础知识', link: '/notes/vue/vue2-lifecycle-basics' },
@@ -94,13 +91,11 @@ function sidebar(): Sidebar {
       },
       {
         text: 'React',
-        collapsible: true,
         collapsed: true,
         items: [{ text: '分析 react-loadable', link: '/notes/react/analyze-react-loadable' }],
       },
       {
         text: 'Css',
-        collapsible: true,
         collapsed: true,
         items: [
           { text: 'CSS 选择器优先级图', link: '/notes/css/css-selector-priority-diagram' },
@@ -110,19 +105,16 @@ function sidebar(): Sidebar {
       },
       {
         text: 'Linux',
-        collapsible: true,
         collapsed: true,
         items: [{ text: '上传文件到 Linux', link: '/notes/linux/upload-files-to-linux' }],
       },
       {
         text: 'Git',
-        collapsible: true,
         collapsed: true,
         items: [{ text: 'Git 常用命令', link: '/notes/git/git-common-commands' }],
       },
       {
         text: 'Algolia',
-        collapsible: true,
         collapsed: true,
         items: [
           {
@@ -135,7 +127,6 @@ function sidebar(): Sidebar {
     '/tips/': [
       {
         text: 'Tools',
-        collapsible: true,
         collapsed: true,
         items: [{ text: '过滤 JD Cookie', link: '/tips/filter-jd-cookie' }],
       },

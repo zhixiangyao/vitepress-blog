@@ -253,7 +253,7 @@ Webkit 内核的浏览器，必须加上`-webkit`前缀。
 
 > ```css
 > .item {
->   flex: none | [ < 'flex-grow' > < 'flex-shrink' >? || < 'flex-basis' > ];
+>   flex: none | [ < 'flex-grow' > < 'flex-shrink' >? || < 'flex-basis' >];
 > }
 > ```
 
