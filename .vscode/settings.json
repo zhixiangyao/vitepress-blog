@@ -1,8 +1,5 @@
 {
-  "files.exclude": {
-    "**/node_modules": true,
-    "**/pnpm-lock.yaml": true
-  },
+  "files.exclude": {},
   "cSpell.words": [
     "Behaviour",
     "Concat",
@@ -11,6 +8,5 @@
     "keyof",
     "typeof",
     "vitepress",
-    "waifu"
   ]
 }
