@@ -1,11 +1,9 @@
-<script lang="ts">
-export default {
-  name: 'FilterJDCookie',
-}
-</script>
-
 <script setup lang="ts">
 import { reactive, watch } from 'vue'
+
+defineOptions({
+  name: 'FilterJDCookie',
+})
 
 const state = reactive({
   cookie: '',

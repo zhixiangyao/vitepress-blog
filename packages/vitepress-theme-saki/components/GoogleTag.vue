@@ -1,13 +1,10 @@
-<script lang="ts">
-export default {
-  name: 'GoogleTag',
-}
-</script>
-
 <script setup lang="ts">
 import { onMounted } from 'vue'
-
 import { loadExternalResource } from '../tools'
+
+defineOptions({
+  name: 'GoogleTag',
+})
 
 const gtag = (...args: any[]) => {
   window.dataLayer.push(args)
