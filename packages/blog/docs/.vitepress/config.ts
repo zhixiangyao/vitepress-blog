@@ -57,6 +57,7 @@ function sidebar(): Sidebar {
         items: [
           { text: '空は高く風は歌う', link: '/moments/空は高く風は歌う' },
           { text: '2023 新年快乐！', link: '/moments/2023-01-01' },
+          { text: '过滤 Chrome Network', link: '/moments/filter-chrome-network' },
         ],
       },
     ],

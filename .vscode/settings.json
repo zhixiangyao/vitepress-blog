@@ -1,5 +1,8 @@
 {
-  "files.exclude": {},
+  "files.exclude": {
+    "**/node_modules": true,
+    "**/pnpm-lock.yaml": true
+  },
   "cSpell.words": [
     "Behaviour",
     "Concat",
