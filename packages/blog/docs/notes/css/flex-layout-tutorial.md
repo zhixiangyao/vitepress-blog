@@ -55,15 +55,11 @@ Webkit 内核的浏览器，必须加上`-webkit`前缀。
 以下 6 个属性设置在容器上。(即设置在 display: flex; 的元素上)
 
 > - flex-direction 方向 决定项目的排列方向
->
 > - flex-wrap 换行
->
 > - flex-flow 方向和换行的简写
 >
 > * justify-content 主轴对齐方式
->
 > * align-items 交叉轴对齐方式
->
 > * align-content 多轴线的对齐方式
 
 ### 3.1 flex-direction 属性

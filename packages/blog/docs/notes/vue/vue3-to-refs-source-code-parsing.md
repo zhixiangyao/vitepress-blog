@@ -69,7 +69,10 @@ class ObjectRefImpl<T extends object, K extends keyof T> {
   // 标记为 ref
   public readonly __v_isRef = true
 
-  constructor(private readonly _object: T, private readonly _key: K) {}
+  constructor(
+    private readonly _object: T,
+    private readonly _key: K,
+  ) {}
 
   get value() {
     return this._object[this._key]
