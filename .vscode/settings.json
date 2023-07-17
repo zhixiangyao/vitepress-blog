@@ -3,6 +3,7 @@
     "**/node_modules": true,
     "**/pnpm-lock.yaml": true
   },
+  "css.validate": false,
   "cSpell.words": [
     "Behaviour",
     "Concat",
