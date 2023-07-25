@@ -102,6 +102,7 @@ function sidebar(): Sidebar {
           { text: 'CSS 选择器优先级图', link: '/notes/css/css-selector-priority-diagram' },
           { text: 'Grid 布局教程', link: '/notes/css/grid-layout-tutorial' },
           { text: 'Flex 布局教程', link: '/notes/css/flex-layout-tutorial' },
+          { text: 'CSS 滚动驱动动画', link: '/notes/css/css-scroll-driven-animations' },
         ],
       },
       {
