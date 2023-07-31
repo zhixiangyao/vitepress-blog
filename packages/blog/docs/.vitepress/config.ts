@@ -69,6 +69,7 @@ function sidebar(): Sidebar {
           { text: 'ES6 Class 继承模拟', link: '/notes/javascript/es6-class-extends-mock' },
           { text: 'call apply bind 模拟', link: '/notes/javascript/call-apply-bind-mock' },
           { text: '取消重复请求', link: '/notes/javascript/cancel-duplicate-requests' },
+          { text: 'local 和 session storage', link: '/notes/javascript/local-and-session-storage' },
         ],
       },
       {
