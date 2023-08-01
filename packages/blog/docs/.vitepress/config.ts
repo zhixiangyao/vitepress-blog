@@ -107,9 +107,12 @@ function sidebar(): Sidebar {
         ],
       },
       {
-        text: 'Linux',
+        text: 'Linux / Unix',
         collapsed: true,
-        items: [{ text: '上传文件到 Linux', link: '/notes/linux/upload-files-to-linux' }],
+        items: [
+          { text: '上传文件到 Linux', link: '/notes/linux/upload-files-to-linux' },
+          { text: 'htop', link: '/notes/linux/htop' },
+        ],
       },
       {
         text: 'Git',
