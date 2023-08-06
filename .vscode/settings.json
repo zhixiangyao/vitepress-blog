@@ -12,5 +12,6 @@
     "keyof",
     "typeof",
     "vitepress",
-  ]
+  ],
+  "typescript.tsdk": "node_modules/typescript/lib"
 }
