@@ -18,7 +18,7 @@
 
 ## 基本命令:
 
-<img src="/vi-vim-cheat-sheet-sch-en.svg" width="1024" height="724" />
+<ZoomImg src="/vi-vim-cheat-sheet-sch-en.svg" width="1024" height="724" />
 
 - 基本操作:
 
@@ -62,7 +62,7 @@
 
 ## 模式
 
-<img src="/vim-vi-workmodel.png" width="787" height="531" />
+<ZoomImg src="/vim-vi-workmodel.png" width="787" height="531"  />
 
 - 输入模式 (`Insert Mode`):
 

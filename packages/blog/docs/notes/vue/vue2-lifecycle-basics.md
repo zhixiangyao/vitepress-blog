@@ -21,7 +21,7 @@
 
 下图展示了实例的生命周期。
 
-<img src="https://v2.vuejs.org/images/lifecycle.png" width="100%" />
+<ZoomImg src="https://v2.vuejs.org/images/lifecycle.png" width="100%" />
 
 ### 1. beforeCreate
 

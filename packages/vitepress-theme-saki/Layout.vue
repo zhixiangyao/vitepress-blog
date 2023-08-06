@@ -11,3 +11,9 @@ const { Layout } = DefaultTheme
 
   <Layout />
 </template>
+
+<style>
+:root {
+  overflow-y: scroll;
+}
+</style>

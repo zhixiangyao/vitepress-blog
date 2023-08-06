@@ -2,7 +2,7 @@
 
 [htop](https://htop.dev/) 是一个交互式的系统监视器, 用于监控 `Linux` 系统 (也支持 `macOS`, 因为 `macOS` 是类 `unix` 系统) 的资源使用情况. 它提供了一个更直观、更友好的界面, 可以实时显示系统的 `CPU` 使用率、内存使用情况、进程列表等信息.
 
-<img src="/screenshot-htop.png" width="1138" height="657" />
+<ZoomImg src="/screenshot-htop.png" width="1138" height="657" />
 
 ## 安装二进制文件
 
