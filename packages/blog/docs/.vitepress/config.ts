@@ -112,6 +112,7 @@ function sidebar(): Sidebar {
         items: [
           { text: '上传文件到 Linux', link: '/notes/linux/upload-files-to-linux' },
           { text: 'htop', link: '/notes/linux/htop' },
+          { text: 'vi/vim', link: '/notes/linux/vi-vim' },
         ],
       },
       {
