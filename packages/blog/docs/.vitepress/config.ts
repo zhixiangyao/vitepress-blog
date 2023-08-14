@@ -121,6 +121,11 @@ function sidebar(): Sidebar {
         items: [{ text: 'Git 常用命令', link: '/notes/git/git-common-commands' }],
       },
       {
+        text: 'English',
+        collapsed: true,
+        items: [{ text: '计算机中的缩写', link: '/notes/english/abbreviation-decoding-in-computer' }],
+      },
+      {
         text: 'Algolia',
         collapsed: true,
         items: [
