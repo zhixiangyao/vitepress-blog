@@ -123,7 +123,7 @@ function sidebar(): Sidebar {
       {
         text: 'English',
         collapsed: true,
-        items: [{ text: '计算机中的缩写', link: '/notes/english/abbreviation-decoding-in-computer' }],
+        items: [{ text: '缩写', link: '/notes/english/abbreviation' }],
       },
       {
         text: 'Algolia',
