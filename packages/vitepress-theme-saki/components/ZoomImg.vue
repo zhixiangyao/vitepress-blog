@@ -9,8 +9,9 @@ defineOptions({
 
 type Props = {
   src: string
-  width: string
-  height: string
+  width?: string
+  height?: string
+  style?: string
 }
 
 const props = defineProps<Props>()
@@ -23,7 +24,13 @@ onMounted(() => {
 </script>
 
 <template>
-  <img ref="imgRef" :src="withBase(props.src)" :width="props.width" :height="props.height" />
+  <img
+    ref="imgRef"
+    :src="withBase(props.src)"
+    :width="props.width"
+    :height="props.height"
+    :style="props.style"
+  />
 </template>
 
 <style>
