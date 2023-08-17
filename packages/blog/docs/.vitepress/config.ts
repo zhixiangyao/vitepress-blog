@@ -94,7 +94,10 @@ function sidebar(): Sidebar {
       {
         text: 'React',
         collapsed: true,
-        items: [{ text: '分析 react-loadable', link: '/notes/react/analyze-react-loadable' }],
+        items: [
+          { text: '分析 react-loadable', link: '/notes/react/analyze-react-loadable' },
+          { text: '实现一个 mini redux', link: '/notes/react/Implement-a-mini-redux' },
+        ],
       },
       {
         text: 'Css',
