@@ -19,11 +19,11 @@ export default defineConfig({
     footer: {
       copyright: '2019-present Zhixiang Yao',
     },
-    algolia: {
-      appId: 'DM7KLUW505',
-      apiKey: '74549704763205291f0582f7786cf183',
-      indexName: 'vitepress_blog',
-    },
+    // algolia: {
+    //   appId: 'DM7KLUW505',
+    //   apiKey: '74549704763205291f0582f7786cf183',
+    //   indexName: 'vitepress_blog',
+    // },
   },
 })
 
