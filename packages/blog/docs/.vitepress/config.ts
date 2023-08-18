@@ -98,8 +98,12 @@ function sidebar(): Sidebar {
           { text: '分析 react-loadable', link: '/notes/react/analyze-react-loadable' },
           { text: '实现一个 mini redux', link: '/notes/react/implement-a-mini-redux' },
           {
-            text: '了解 React 18 中为外部存储引入的新 Hook useSyncExternalStore',
+            text: 'React 18 新 Hook useSyncExternalStore',
             link: '/notes/react/react-18-useSyncExternalStore-api',
+          },
+          {
+            text: 'React 18 startTransition API',
+            link: '/notes/react/react-18-introduces-startTransition-api',
           },
         ],
       },
