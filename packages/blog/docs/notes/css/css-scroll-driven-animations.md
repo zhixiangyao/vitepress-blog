@@ -6,7 +6,7 @@
 
 [Online Preview](pathname:///scroll-progress-timeline.html)
 
-<ZoomImg src="/scroll-progress-timeline.gif" width="250" height="418" />
+<ZoomImg src="/scroll_progress_timeline.gif" width="250" height="418" />
 
 ```html
 <body>

@@ -62,7 +62,7 @@
 
 ## 模式
 
-<ZoomImg src="/vim-vi-workmodel.png" width="787" height="531"  />
+<ZoomImg src="/vim_vi_workmodel.png" width="787" height="531"  />
 
 - 输入模式 (`Insert Mode`):
 
