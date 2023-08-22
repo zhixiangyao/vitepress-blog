@@ -105,6 +105,10 @@ function sidebar(): Sidebar {
             text: 'React 18 startTransition API',
             link: '/notes/react/react-18-introduces-startTransition-api',
           },
+          {
+            text: 'useLayoutEffect 对比 useEffect',
+            link: '/notes/react/useLayoutEffect-vs-useEffect',
+          },
         ],
       },
       {
