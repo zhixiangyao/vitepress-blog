@@ -90,6 +90,7 @@ function sidebar(): Sidebar {
           { text: '取消重复请求', link: '/notes/javascript/cancel-duplicate-requests' },
           { text: 'local 和 session storage', link: '/notes/javascript/local-and-session-storage' },
           { text: 'instanceof 模拟', link: '/notes/javascript/instanceof-mock' },
+          { text: '位运算符', link: '/notes/javascript/bit-operator' },
         ],
       },
       {
