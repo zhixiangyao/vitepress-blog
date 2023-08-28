@@ -59,8 +59,8 @@ function nav(): Nav {
       link: '/notes/javascript/es6-class-extends-mock',
     },
     {
-      text: 'Tips',
-      link: '/tips/filter-jd-cookie',
+      text: 'Tools',
+      link: '/tools/filter-jd-cookie',
     },
     { text: 'About', link: '/about' },
   ]
@@ -172,11 +172,10 @@ function sidebar(): Sidebar {
         ],
       },
     ],
-    '/tips/': [
+    '/tools/': [
       {
-        text: 'Tools',
-        collapsed: true,
-        items: [{ text: '过滤 JD Cookie', link: '/tips/filter-jd-cookie' }],
+        text: '过滤 JD Cookie',
+        link: '/tools/filter-jd-cookie',
       },
     ],
   }
