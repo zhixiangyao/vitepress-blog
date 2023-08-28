@@ -1,22 +1,29 @@
 <script setup lang="ts">
 import { onMounted, onBeforeUnmount, ref, watch } from 'vue'
 import { useData } from 'vitepress'
+
 import { loadExternalResource } from '../tools'
 
 defineOptions({
   name: 'Rain',
 })
 
-const useRain = () => {
+type BG = {
+  desktopDark: string
+  desktopLight: string
+  mobileDark: string
+  mobileLight: string
+}
+
+type Props = {
+  bg: BG
+}
+
+const props = defineProps<Props>()
+
+const useRain = (bg: BG) => {
   const canvasRef = ref<HTMLCanvasElement>()
   let raindropFx: InstanceType<typeof window.RaindropFX>
-  const imgPrefix = 'https://raw.githubusercontent.com/zhixiangyao/CDN/master/images'
-  const bg = {
-    desktopDark: imgPrefix + '/anime/fate/999332.png',
-    desktopLight: imgPrefix + '/anime/fate/688669.png',
-    mobileDark: imgPrefix + '/anime/twitter/3.jpeg',
-    mobileLight: imgPrefix + '/anime/twitter/2.jpeg',
-  }
   const url = 'https://yaozhixiang.top/assets/js/RaindropFX.js'
 
   const resizeRain = () => {
@@ -113,20 +120,14 @@ const useRain = () => {
 }
 
 const { isDark } = useData()
-const { canvasRef } = useRain()
+const { canvasRef } = useRain(props.bg)
 </script>
 
 <template>
-  <canvas :ref="(e) => (canvasRef = e as HTMLCanvasElement)" id="rain"></canvas>
+  <canvas ref="canvasRef" id="rain"></canvas>
 </template>
 
 <style>
-@media screen and (width <= 639px) {
-  #rain {
-    display: none;
-  }
-}
-
 #rain {
   position: fixed;
   inset: 0;
