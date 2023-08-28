@@ -9,7 +9,7 @@ const list = computed(() => {
   const sidebars = Object.values(theme.value.sidebar) as any
 
   for (const sidebar of sidebars) {
-    for (const { items } of sidebar) {
+    for (const { items = [] } of sidebar) {
       for (const item of items) {
         temp.push(item)
       }

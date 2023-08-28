@@ -9,6 +9,9 @@ hero:
     - theme: brand
       text: Read Blog
       link: /notes/javascript/es6-class-extends-mock
+    - theme: brand
+      text: Blog List
+      link: /list
 ---
 
 <Rain
