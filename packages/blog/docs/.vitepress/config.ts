@@ -62,6 +62,10 @@ function nav(): Nav {
       text: 'Tools',
       link: '/tools/filter-jd-cookie',
     },
+    {
+      text: 'Arithmetic',
+      link: '/arithmetic/sorting-algorithm',
+    },
     { text: 'About', link: '/about' },
   ]
 }
@@ -176,6 +180,12 @@ function sidebar(): Sidebar {
       {
         text: '过滤 JD Cookie',
         link: '/tools/filter-jd-cookie',
+      },
+    ],
+    '/arithmetic/': [
+      {
+        text: '排序算法',
+        link: '/arithmetic/sorting-algorithm',
       },
     ],
   }
