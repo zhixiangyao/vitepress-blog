@@ -89,6 +89,7 @@ function sidebar(): Sidebar {
           { text: 'call apply bind 模拟', link: '/notes/javascript/call-apply-bind-mock' },
           { text: '取消重复请求', link: '/notes/javascript/cancel-duplicate-requests' },
           { text: 'local 和 session storage', link: '/notes/javascript/local-and-session-storage' },
+          { text: 'instanceof 模拟', link: '/notes/javascript/instanceof-mock' },
         ],
       },
       {
