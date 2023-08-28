@@ -63,9 +63,11 @@ watch(
 
 textarea,
 code {
+  margin: 10px 0;
   width: 70%;
   min-height: 100px;
   padding: 10px;
+  background-color: var(--vp-code-bg);
   word-break: break-all;
 }
 
