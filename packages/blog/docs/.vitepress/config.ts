@@ -198,6 +198,13 @@ function sidebar(): Sidebar {
       },
     ],
     '/tools/': [{ text: '过滤 JD Cookie', base: '/tools/', link: 'filter-jd-cookie' }],
-    '/arithmetic/': [{ text: '排序算法', base: '/arithmetic/', link: 'sorting-algorithm' }],
+    '/arithmetic/': [
+      { text: '排序算法', base: '/arithmetic/', link: 'sorting-algorithm' },
+      {
+        text: 'Leetcode',
+        base: '/arithmetic/leetcode/',
+        items: [{ text: '第 679 题，数组的度', link: '679-degree-of-an-array' }],
+      },
+    ],
   }
 }
