@@ -34,7 +34,10 @@ export const sidebar = () => {
         text: 'Babel',
         collapsed: true,
         base: '/notes/babel/',
-        items: [{ text: 'class 是如何被 babel 转译', link: 'class-translated-by-babel' }],
+        items: [
+          { text: 'class 是如何被 babel 转译', link: 'class-translated-by-babel' },
+          { text: 'AST: 修改 function 名', link: 'ast-modify-function-name' },
+        ],
       },
       {
         text: 'TypeScript',
