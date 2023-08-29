@@ -1,4 +1,4 @@
-# 第 679 题，数组的度
+# 第679题，数组的度
 
 ## [题目描述](https://leetcode-cn.com/problems/degree-of-an-array/)
 

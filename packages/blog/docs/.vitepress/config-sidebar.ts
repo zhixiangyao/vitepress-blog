@@ -116,7 +116,9 @@ export const sidebar = () => {
       {
         text: 'Leetcode',
         base: '/arithmetic/leetcode/',
-        items: [{ text: '第 679 题，数组的度', link: '679-degree-of-an-array' }],
+        items: [
+          { text: '第679题，数组的度', link: '679-degree-of-an-array' },
+        ],
       },
     ],
   } satisfies Sidebar
