@@ -22,6 +22,7 @@ export const sidebar = () => {
           { text: 'instanceof 模拟', link: 'instanceof-mock' },
           { text: '位运算符', link: 'bit-operator' },
           { text: '函数防抖', link: 'debounce' },
+          { text: '函数柯里化', link: 'currying' },
         ],
       },
       {
@@ -117,9 +118,7 @@ export const sidebar = () => {
       {
         text: 'Leetcode',
         base: '/arithmetic/leetcode/',
-        items: [
-          { text: '第679题，数组的度', link: '679-degree-of-an-array' },
-        ],
+        items: [{ text: '第679题，数组的度', link: '679-degree-of-an-array' }],
       },
     ],
   } satisfies Sidebar
