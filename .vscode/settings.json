@@ -1,8 +1,5 @@
 {
-  "files.exclude": {
-    "**/node_modules": true,
-    "**/pnpm-lock.yaml": true
-  },
+  "files.exclude": {},
   "css.validate": false,
   "cSpell.words": [
     "Behaviour",
@@ -11,7 +8,7 @@
     "frontmatter",
     "keyof",
     "typeof",
-    "vitepress",
+    "vitepress"
   ],
   "typescript.tsdk": "node_modules/typescript/lib"
 }
