@@ -1,29 +1,52 @@
 <script setup lang="ts">
-import { useData } from 'vitepress'
+import { DefaultTheme, useData } from 'vitepress'
 import { computed } from 'vue'
 
 const { theme } = useData()
 
-const list = computed(() => {
-  const temp: { link: string; text: string }[] = []
-  const sidebars = Object.values(theme.value.sidebar) as any
+type Sidebar = [string, DefaultTheme.SidebarItem[]][]
 
-  for (const sidebar of sidebars) {
-    for (const { items = [] } of sidebar) {
-      for (const item of items) {
-        temp.push(item)
-      }
-    }
-  }
-
-  return temp
+const sidebar = computed(() => {
+  return Object.entries(theme.value.sidebar) as Sidebar
 })
+
+console.info(sidebar)
+
+const capitalized = (name: string) => {
+  const [str, ...rest] = name.replace('/', '').replace('\/', '')
+
+  return str.toUpperCase() + rest.join('')
+}
 </script>
 
 <template>
-  <ul v-for="item of list" :key="item.link">
+  <ul v-for="[name, sidebarValue] of sidebar" :key="name">
     <li>
-      <a :href="item.link">{{ item.text }}</a>
+      <b>{{ capitalized(name) }}</b>
+
+      <ul v-for="item of sidebarValue" :key="item.text">
+        <template v-if="item.items?.length !== undefined">
+          <li>
+            <b>{{ item.text }}</b>
+
+            <ul v-for="{ text, link } of item.items" :key="text">
+              <li>
+                <a :href="(item.base ?? '') + link">
+                  <b>{{ text }}</b>
+                </a>
+              </li>
+            </ul>
+          </li>
+        </template>
+
+        <template v-else>
+          <a :href="(item.base ?? '') + item.link">
+            <b>
+              {{ item.text }}
+            </b>
+          </a>
+        </template>
+      </ul>
     </li>
   </ul>
 </template>
