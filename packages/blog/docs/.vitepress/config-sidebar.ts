@@ -21,6 +21,7 @@ export const sidebar = () => {
           { text: 'local 和 session storage', link: 'local-and-session-storage' },
           { text: 'instanceof 模拟', link: 'instanceof-mock' },
           { text: '位运算符', link: 'bit-operator' },
+          { text: '函数防抖', link: 'debounce' },
         ],
       },
       {
