@@ -1,6 +1,10 @@
 # AST: 修改 function 名
 
-利用 [Esprima](https://www.npmjs.com/package/esprima)、[Estraverse](https://www.npmjs.com/package/estraverse)、[Escodegen](https://www.npmjs.com/package/escodegen) 把 `function` 转化为 `AST`，再修改其方法名
+这里，我们自己来实现一个`Bebel` 插件，来修改 `function` 名。
+
+<embed src="https://cdn.jsdelivr.net/gh/zhixiangyao/CDN/images/icon/babel.svg" type="image/svg+xml" />
+
+主要是利用 [Esprima](https://www.npmjs.com/package/esprima)、[Estraverse](https://www.npmjs.com/package/estraverse)、[Escodegen](https://www.npmjs.com/package/escodegen) 把 `function` 转化为 `AST`，再修改其方法名
 
 ### 工具介绍
 
@@ -8,7 +12,9 @@
 - `estraverse.traverse` 遍历 `AST` 在其配置的 `enter` 钩子中修改 `AST`
 - `escodegen.generate` 根据 `AST` 生成代码（和 `esprima.parseScript` 相反）
 
-### 代码(TS)
+### 代码
+
+- [Github 源码](https://github.com/zhixiangyao/typescript-playground/blob/27800ff78097af7aafea4f513508b403b0de8fb3/src/transform/transformFnName.ts)
 
 ```ts
 import { parseScript } from 'esprima'
