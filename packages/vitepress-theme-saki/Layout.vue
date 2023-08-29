@@ -16,4 +16,9 @@ const { Layout } = DefaultTheme
 :root {
   overflow-y: scroll;
 }
+
+/* fix vision error */
+header .content-body {
+  transition: none !important;
+}
 </style>
