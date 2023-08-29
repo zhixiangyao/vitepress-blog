@@ -34,7 +34,10 @@ export const sidebar = () => {
         text: 'TypeScript',
         collapsed: true,
         base: '/notes/typescript/',
-        items: [{ text: 'Type Challenge', link: 'type-challenge' }],
+        items: [
+          { text: 'Type Challenge', link: 'type-challenge' },
+          { text: 'TS装饰器产物分析', link: 'ts-decorator-product-analysis' },
+        ],
       },
       {
         text: 'Vue',
