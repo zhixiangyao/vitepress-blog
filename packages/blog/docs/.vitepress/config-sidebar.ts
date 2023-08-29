@@ -18,6 +18,10 @@ export const sidebar = () => {
           { text: 'ES6 Class 继承模拟', link: 'es6-class-extends-mock' },
           { text: 'call apply bind 模拟', link: 'call-apply-bind-mock' },
           { text: '取消重复请求', link: 'cancel-duplicate-requests' },
+          {
+            text: '使用 generator 函数模拟 await',
+            link: 'use-the-generator-func-to-simulate-await',
+          },
           { text: 'local 和 session storage', link: 'local-and-session-storage' },
           { text: 'instanceof 模拟', link: 'instanceof-mock' },
           { text: '位运算符', link: 'bit-operator' },
