@@ -2,7 +2,7 @@
 
 利用 `Webpack` 验证 `ES Module` 整体加载模块时，是否存在静态分析优化～
 
-<img src="https://cdn.jsdelivr.net/gh/zhixiangyao/CDN/images/icon/webpack.jpeg" style="margin: 10px; border-radius: 5px;" />
+<img src="https://cdn.jsdelivr.net/gh/zhixiangyao/CDN/images/icon/webpack.jpeg" class="m-3 rounded-md"/>
 
 ## [Tree Shaking](https://webpack.docschina.org/guides/tree-shaking/#mark-the-file-as-side-effect-free)
 

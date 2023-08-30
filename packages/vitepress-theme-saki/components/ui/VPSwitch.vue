@@ -36,10 +36,10 @@ const props = withDefaults(defineProps<Props>(), {
 <style scoped>
 .switch[aria-checked='false'] :deep(.check) {
   /* rtl:ignore */
-  transform: translateX(18px);
+  @apply translate-x-[18px];
 }
 
 .dark .switch .icon path {
-  fill: #fff;
+  @apply fill-white;
 }
 </style>

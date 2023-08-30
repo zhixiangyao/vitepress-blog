@@ -6,8 +6,8 @@
 
 :::
 
-<ZoomImg src="https://cdn.jsdelivr.net/gh/zhixiangyao/CDN/images/leetcode/ListNode/ListNode.001.png" style="width: 100%;"  />
-<ZoomImg src="https://cdn.jsdelivr.net/gh/zhixiangyao/CDN/images/leetcode/ListNode/ListNode.002.png" style="width: 100%;"  />
-<ZoomImg src="https://cdn.jsdelivr.net/gh/zhixiangyao/CDN/images/leetcode/ListNode/ListNode.003.png" style="width: 100%;"  />
-<ZoomImg src="https://cdn.jsdelivr.net/gh/zhixiangyao/CDN/images/leetcode/ListNode/ListNode.004.png" style="width: 100%;"  />
-<ZoomImg src="https://cdn.jsdelivr.net/gh/zhixiangyao/CDN/images/leetcode/ListNode/ListNode.005.png" style="width: 100%;"  />
+<ZoomImg src="https://cdn.jsdelivr.net/gh/zhixiangyao/CDN/images/leetcode/ListNode/ListNode.001.png" class="w-fill"  />
+<ZoomImg src="https://cdn.jsdelivr.net/gh/zhixiangyao/CDN/images/leetcode/ListNode/ListNode.002.png" class="w-fill"  />
+<ZoomImg src="https://cdn.jsdelivr.net/gh/zhixiangyao/CDN/images/leetcode/ListNode/ListNode.003.png" class="w-fill"  />
+<ZoomImg src="https://cdn.jsdelivr.net/gh/zhixiangyao/CDN/images/leetcode/ListNode/ListNode.004.png" class="w-fill"  />
+<ZoomImg src="https://cdn.jsdelivr.net/gh/zhixiangyao/CDN/images/leetcode/ListNode/ListNode.005.png" class="w-fill"  />

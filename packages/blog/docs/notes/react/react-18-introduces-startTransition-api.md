@@ -16,7 +16,7 @@
 
 例如，我们要从一个大列表中搜索一张照片。当我们在搜索输入框中键入照片名称时，我们希望键入的字符能毫无延迟地出现在屏幕上。当我们不能快速看到字符时，我们脑海中出现的第一个反应就是 _"啊，这个应用程序太慢了！"_，这让我们感到沮丧。
 
-<ZoomImg src="/search_before_startTransition.gif" style="width: 100%;"  />
+<ZoomImg src="/search_before_startTransition.gif" class="w-fill"  />
 
 ## 为什么搜索会有点延迟？
 
@@ -140,7 +140,7 @@ const onChange = (e) => {
 }
 ```
 
-<ZoomImg src="/search_after_startTransition.gif" style="width: 100%;"  />
+<ZoomImg src="/search_after_startTransition.gif" class="w-fill"  />
 
 ## 我们可以使用 `setTimeout` 来代替 `startTransition` API 吗？
 

@@ -20,9 +20,9 @@ watch([() => state.input, () => decode.value], ([newInputValue, newSwValue]) => 
 </script>
 
 <template>
-  <div class="base64">
-    <div class="switch">
-      <span>{{ decode ? 'Base64 解码' : 'Base64 编码' }}</span>
+  <div class="flex flex-col flex-nowrap self-start">
+    <div class="flex gap-5 my-3">
+      <span class="w-24">{{ decode ? 'Base64 解码' : 'Base64 编码' }}</span>
       <VPSwitch :checked="decode" :onChange="() => (decode = !decode)" />
     </div>
 
@@ -34,29 +34,10 @@ watch([() => state.input, () => decode.value], ([newInputValue, newSwValue]) => 
 </template>
 
 <style scoped>
-.base64 {
-  display: flex;
-  flex-flow: column nowrap;
-  align-items: self-start;
-}
-
-.base64 div.switch {
-  display: flex;
-  gap: 20px;
-  margin: 10px 0;
-}
-
-.base64 div.switch span {
-  width: 100px;
-}
-
 textarea,
 code {
-  margin: 10px 0;
-  width: 70%;
-  min-height: 100px;
-  padding: 10px;
+  @apply my-3 w-[70%] min-h-[100px] p-3 break-all;
+
   background-color: var(--vp-code-bg);
-  word-break: break-all;
 }
 </style>

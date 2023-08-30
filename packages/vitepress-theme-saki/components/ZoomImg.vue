@@ -35,10 +35,10 @@ onMounted(() => {
 
 <style>
 .medium-zoom-overlay {
-  z-index: 20;
+  @apply z-20;
 }
 
 .medium-zoom-image {
-  z-index: 21;
+  @apply z-30;
 }
 </style>

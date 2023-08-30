@@ -36,11 +36,11 @@
 
 通过同步呈现，用户界面上呈现的颜色是一致的。
 
-<ZoomImg src="/rendering_before_react_18.png" style="width: 100%;"  />
+<ZoomImg src="/rendering_before_react_18.png" class="w-fill"  />
 
 在并发渲染中，最初获取的颜色是蓝色。`React` 生成，存储更新为红色。`React` 会使用更新后的红色值继续呈现。这会导致 `UI` 不一致，也就是所谓的 "撕裂"。
 
-<ZoomImg src="/concurrent_rendering_react_18.png" style="width: 100%;"  />
+<ZoomImg src="/concurrent_rendering_react_18.png" class="w-fill"  />
 
 为了解决这个问题，[`React` 团队添加了 `useMutableSource` `Hook`](https://github.com/reactjs/rfcs/blob/main/text/0147-use-mutable-source.md)，以便安全高效地从可变外部源读取数据。但是，工作组成员报告了现有 [`API` 设计的缺陷](https://github.com/reactwg/react-18/discussions/84)，这使得库维护者很难在其实现中采用 `useMutableSource`。经过反复讨论，`useMutableSource` `Hook` 被重新设计并更名为 `useSyncExternalStore`。
 

@@ -124,15 +124,5 @@ const { canvasRef } = useRain(props.bg)
 </script>
 
 <template>
-  <canvas ref="canvasRef" id="rain"></canvas>
+  <canvas class="fixed inset-0 -z-[1] w-full h-full" ref="canvasRef" id="rain"></canvas>
 </template>
-
-<style>
-#rain {
-  position: fixed;
-  inset: 0;
-  z-index: -1;
-  width: 100%;
-  height: 100%;
-}
-</style>

@@ -99,7 +99,7 @@ Foo instanceof Function // true
 
 [JavaScript Object Layout - Hursh Jain/mollypages.org](http://mollypages.org/tutorials/js.mp)
 
-<ZoomImg src="/javascript_object_layout.jpg" style="width: 100%;"  />
+<ZoomImg src="/javascript_object_layout.jpg" class="w-fill"  />
 
 根据上面的原型图可知：
 

@@ -41,43 +41,26 @@ watch(
 </script>
 
 <template>
-  <div class="filter-jd-cookie">
+  <div class="flex flex-col flex-nowrap self-start">
     <div>Original Cookie:</div>
+
     <textarea
       v-model="state.cookie"
       placeholder="请把 cookie 黏贴到这里"
       cols="30"
       rows="10"
     ></textarea>
+
     <div>Filtered JD Cookie: {{ state.msg ? ` (${state.msg})` : '' }}:</div>
     <code>{{ state.filteredJDCookie }}</code>
   </div>
 </template>
 
 <style scoped>
-.filter-jd-cookie {
-  display: flex;
-  flex-flow: column nowrap;
-  align-items: self-start;
-}
-
 textarea,
 code {
-  margin: 10px 0;
-  width: 70%;
-  min-height: 100px;
-  padding: 10px;
+  @apply my-3 w-[70%] min-h-[100px] p-3 break-all;
+
   background-color: var(--vp-code-bg);
-  word-break: break-all;
-}
-
-button {
-  margin-top: 20px;
-  padding: 5px 20px;
-  cursor: pointer;
-}
-
-button[disabled='disabled'] {
-  cursor: not-allowed;
 }
 </style>

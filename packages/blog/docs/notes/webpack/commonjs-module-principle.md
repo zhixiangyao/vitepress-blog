@@ -2,7 +2,7 @@
 
 `webpack` 编译产物在浏览器中， `commonjs` 模块化的实现～
 
-<img src="https://cdn.jsdelivr.net/gh/zhixiangyao/CDN/images/icon/webpack.jpeg" style="margin: 10px; border-radius: 5px;" />
+<img src="https://cdn.jsdelivr.net/gh/zhixiangyao/CDN/images/icon/webpack.jpeg" class="m-3 rounded-md" />
 
 ## 打包前
 
