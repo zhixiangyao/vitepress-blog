@@ -10,8 +10,6 @@ const sidebar = computed(() => {
   return Object.entries(theme.value.sidebar) as Sidebar
 })
 
-console.info(sidebar)
-
 const capitalized = (name: string) => {
   const [str, ...rest] = name.replace('/', '').replace('\/', '')
 
