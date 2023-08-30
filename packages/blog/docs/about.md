@@ -2,7 +2,7 @@
 
 👋 Hello! I'm Yáo Zhi Xiang (In China, the order is different, Yáo is my last name, zhì xiáng is my first name.)
 
-### 📜 Target
+## 📜 Target
 
 - 🚶 The first step is as good as half over
 - 🚀 2023 Goals:
@@ -17,7 +17,7 @@
   - Dota2 & Apex & 蛋仔派对 (dàn zǎi pài duì - Egg party)
   - Work out
 
-### 📜 Project
+## 📜 Project
 
 - ⚡️ [vite-react-ts-starter](https://github.com/zhixiangyao/vite-react-ts-starter) (react + react-router)
 - ⚡️ [vite-react-ts-antd-starter](https://github.com/zhixiangyao/vite-react-ts-antd-starter) (react + react-router)
@@ -29,6 +29,32 @@
 
 - 💻 [Hackintosh-B460M-MORTAR-i5-10400-RX5700-4K](https://github.com/zhixiangyao/Hackintosh-B460M-MORTAR-i5-10400-RX5700-4K)
 
-### 🐈‍⬛ Github Stats
+## 🐈‍⬛ Github Stats
 
 <img alt="zhixiangyao's GitHub Stats" src="https://github-readme-stats.vercel.app/api?username=zhixiangyao&theme=cobalt&show_icons=true" />
+
+## Friend link
+
+<script setup>
+const members = [
+  {
+    avatar: 'https://avatars.githubusercontent.com/u/12573233?v=4',
+    name: 'J Zong',
+    title: 'Friend',
+    links: [
+      { icon: 'github', link: 'https://github.com/JackZong' },
+    ]
+  },
+  {
+    avatar: 'https://www.github.com/yyx990803.png',
+    name: 'Evan You',
+    title: 'Friend',
+    links: [
+      { icon: 'github', link: 'https://github.com/yyx990803' },
+      { icon: 'twitter', link: 'https://twitter.com/youyuxi' }
+    ]
+  },
+]
+</script>
+
+<FriendLinks  :members="members" />

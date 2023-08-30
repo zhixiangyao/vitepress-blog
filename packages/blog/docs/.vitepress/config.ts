@@ -32,13 +32,12 @@ export default defineConfig({
     nav: nav(),
     sidebar: sidebar(),
     footer: {
-      copyright: '2019-present Zhixiang Yao',
+      copyright: 'Copyright © 2019-present <a href="https://github.com/zhixiangyao">Zhixiang Yao</a>',
     },
-    // algolia: {
-    //   appId: 'DM7KLUW505',
-    //   apiKey: '74549704763205291f0582f7786cf183',
-    //   indexName: 'vitepress_blog',
-    // },
+    search: {
+      provider: 'local',
+      options: {},
+    },
   },
 
   head: [

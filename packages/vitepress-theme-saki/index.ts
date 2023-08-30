@@ -7,6 +7,7 @@ import Base64 from './components/Base64.vue'
 import BlogList from './components/BlogList.vue'
 import Rain from './components/Rain.vue'
 import ZoomImg from './components/ZoomImg.vue'
+import FriendLinks from './components/FriendLinks.vue'
 
 type Theme = typeof DefaultTheme
 
@@ -22,6 +23,7 @@ export default <Theme>{
     ctx.app.component('BlogList', BlogList)
     ctx.app.component('Rain', Rain)
     ctx.app.component('ZoomImg', ZoomImg)
+    ctx.app.component('FriendLinks', FriendLinks)
   },
   Layout,
 }
