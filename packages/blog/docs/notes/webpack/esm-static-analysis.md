@@ -9,10 +9,10 @@
 `tree shaking` 是一个术语，通常用于描述移除 `JavaScript` 上下文中的未引用代码(`dead-code`)。它依赖于 `ES2015` 模块语法的 **静态结构** 特性，例如 `import` 和 `export`。这个术语和概念实际上是由 `ES2015` 模块打包工具 `rollup` 普及起来的。
 
 ```js
-import * as circle from './circle';
+import * as circle from './circle'
 
-console.log('圆面积：' + circle.area(4));
-console.log('圆周长：' + circle.circumference(14));
+console.log('圆面积：' + circle.area(4))
+console.log('圆周长：' + circle.circumference(14))
 ```
 
 最近重温**阮一峰**大神的[ECMAScript 6 入门](https://es6.ruanyifeng.com/)教程的时候，看到了这句话[注意，模块整体加载所在的那个对象（上例是 circle），应该是可以静态分析的，所以不允许运行时改变](https://es6.ruanyifeng.com/#docs/module#%E6%A8%A1%E5%9D%97%E7%9A%84%E6%95%B4%E4%BD%93%E5%8A%A0%E8%BD%BD)
