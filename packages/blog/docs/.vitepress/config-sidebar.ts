@@ -45,6 +45,14 @@ export const sidebar = () => {
         ],
       },
       {
+        text: 'Webpack',
+        collapsed: true,
+        base: '/notes/webpack/',
+        items: [
+          { text: 'Commonjs 模块原理', link: 'commonjs-module-principle' },
+        ],
+      },
+      {
         text: 'TypeScript',
         collapsed: true,
         base: '/notes/typescript/',
