@@ -50,6 +50,7 @@ export const sidebar = () => {
         base: '/notes/webpack/',
         items: [
           { text: 'Commonjs 模块原理', link: 'commonjs-module-principle' },
+          { text: 'ES Module 模块原理', link: 'esm-module-principle' },
         ],
       },
       {
