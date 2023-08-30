@@ -38,6 +38,7 @@ export const sidebar = () => {
           { text: 'class 是如何被 babel 转译', link: 'class-translated-by-babel' },
           { text: 'AST: 修改 function 名', link: 'ast-modify-function-name' },
           { text: 'AST: 转换箭头函数', link: 'ast-convert-arrow-function' },
+          { text: 'AST: 转换 Import 实现按需导入', link: 'ast-convert-import-to-import-on-demand' },
         ],
       },
       {
