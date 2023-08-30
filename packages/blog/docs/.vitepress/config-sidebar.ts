@@ -150,7 +150,10 @@ export const sidebar = () => {
       {
         text: 'Leetcode',
         base: '/arithmetic/leetcode/',
-        items: [{ text: '第679题，数组的度', link: '679-degree-of-an-array' }],
+        items: [
+          { text: '第679题-数组的度', link: '679-degree-of-an-array' },
+          { text: '第1题-两数之和', link: '1-two-sum' },
+        ],
       },
     ],
   } satisfies Sidebar
