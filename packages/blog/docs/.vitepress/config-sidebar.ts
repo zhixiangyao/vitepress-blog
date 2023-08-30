@@ -51,6 +51,7 @@ export const sidebar = () => {
         items: [
           { text: 'Commonjs 模块原理', link: 'commonjs-module-principle' },
           { text: 'ES Module 模块原理', link: 'esm-module-principle' },
+          { text: 'ES Module 静态分析', link: 'esm-static-analysis' },
         ],
       },
       {
