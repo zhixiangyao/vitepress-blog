@@ -147,6 +147,7 @@ export const sidebar = () => {
     '/tools/': [{ text: '过滤 JD Cookie', base: '/tools/', link: 'filter-jd-cookie' }],
     '/arithmetic/': [
       { text: '排序算法', base: '/arithmetic/', link: 'sorting-algorithm' },
+      { text: '单向链表交换节点', base: '/arithmetic/', link: 'one-way-linked-list-exchange-node' },
       {
         text: 'Leetcode',
         base: '/arithmetic/leetcode/',
