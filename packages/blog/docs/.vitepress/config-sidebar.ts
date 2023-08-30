@@ -40,6 +40,7 @@ export const sidebar = () => {
           { text: 'AST: 转换箭头函数', link: 'ast-convert-arrow-function' },
           { text: 'AST: 转换 Import 实现按需导入', link: 'ast-convert-import-to-import-on-demand' },
           { text: 'AST: 转换 Await', link: 'ast-convert-await' },
+          { text: 'AST: 转换数组 Spread', link: 'ast-convert-array-spread' },
         ],
       },
       {
