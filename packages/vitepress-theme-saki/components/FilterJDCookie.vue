@@ -59,7 +59,7 @@ watch(
 <style scoped>
 textarea,
 code {
-  @apply my-3 w-[70%] min-h-[100px] p-3 break-all;
+  @apply my-3 w-[70%] min-h-[100px] p-3 break-all !rounded-md;
 
   background-color: var(--vp-code-bg);
 }
