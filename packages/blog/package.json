@@ -9,5 +9,11 @@
   },
   "devDependencies": {
     "vitepress-theme-saki": "workspace:0.1.0"
+  },
+  "postcss": {
+    "plugins": {
+      "tailwindcss": {},
+      "autoprefixer": {}
+    }
   }
 }
