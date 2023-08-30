@@ -4,10 +4,6 @@
 
 <img src="https://cdn.jsdelivr.net/gh/zhixiangyao/CDN/images/icon/webpack.jpeg" style="margin: 10px; border-radius: 5px;" />
 
-- 本文参考[webpack 中文文档](https://webpack.docschina.org/)
-
-- [webpack 英文文档](https://webpack.js.org/)请看这里
-
 ## 打包前
 
 ### 文件:
@@ -140,3 +136,9 @@ module.exports = merge(base, {
   },
 })
 ```
+
+## 参考
+
+- [Webpack 中文文档](https://webpack.docschina.org/)
+
+- [Webpack 英文文档](https://webpack.js.org/)

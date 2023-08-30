@@ -4,10 +4,6 @@
 
 <img src="https://cdn.jsdelivr.net/gh/zhixiangyao/CDN/images/icon/webpack.jpeg" style="margin: 10px; border-radius: 5px;" />
 
-- 本文参考[Webpack 中文文档](https://webpack.docschina.org/)
-
-- [Webpack 英文文档](https://webpack.js.org/)请看这里
-
 ## ESModule 和 ESModule
 
 ### 打包前
@@ -378,3 +374,9 @@ __webpack_require__.d = function (exports, name, getter) {
     },
 })
 ```
+
+## 参考
+
+- [Webpack 中文文档](https://webpack.docschina.org/)
+
+- [Webpack 英文文档](https://webpack.js.org/)
