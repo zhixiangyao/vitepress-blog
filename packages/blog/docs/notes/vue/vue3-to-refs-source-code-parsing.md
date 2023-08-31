@@ -39,6 +39,10 @@ console.log(book.title) // 'Vue 3 Detailed Guide'
 
 `toRefs` 本质就是 `toRef` 的封装，是基于 `toRef` 的。
 
+> [`toRefs` Source Code](https://github.com/vuejs/core/blob/8998afa42755cbdb3403cd6c0fe158980da8492c/packages/reactivity/src/ref.ts#L326)
+
+::: details
+
 ```ts
 /**
  * Converts a reactive object to a plain object where each property of the
@@ -65,9 +69,15 @@ export function toRefs<T extends object>(object: T): ToRefs<T> {
 }
 ```
 
+:::
+
 ## toRef
 
 `toRef` 是一个判断函数，会判断 `source` 的类型去做不同的处理。
+
+> [`toRef` Source Code](https://github.com/vuejs/core/blob/8998afa42755cbdb3403cd6c0fe158980da8492c/packages/reactivity/src/ref.ts#L414) > [`GetterRefImpl` Source Code](https://github.com/vuejs/core/blob/8998afa42755cbdb3403cd6c0fe158980da8492c/packages/reactivity/src/ref.ts#L360)
+
+::: details
 
 ```ts
 export function toRef(
@@ -100,6 +110,8 @@ class GetterRefImpl<T> {
 }
 ```
 
+:::
+
 如果目标是 `ref` 就直接返回，如果不是创建一个新的 `ObjectRefImpl` 类的实例
 
 ::: warning Why
@@ -117,6 +129,10 @@ const a = toRef(obj, 'b')
 
 :::
 
+> [`propertyToRef` Source Code](https://github.com/vuejs/core/blob/8998afa42755cbdb3403cd6c0fe158980da8492c/packages/reactivity/src/ref.ts#L446)
+
+::: details
+
 ```js
 function propertyToRef(source: Record<string, any>, key: string, defaultValue?: unknown) {
   const val = source[key]
@@ -124,9 +140,15 @@ function propertyToRef(source: Record<string, any>, key: string, defaultValue?: 
 }
 ```
 
+:::
+
 ## ObjectRefImpl
 
 `ObjectRefImpl` 类实际是对源对象地址的引用
+
+> [`ObjectRefImpl` Source Code](https://github.com/vuejs/core/blob/8998afa42755cbdb3403cd6c0fe158980da8492c/packages/reactivity/src/ref.ts#L337)
+
+::: details
 
 ```ts
 class ObjectRefImpl<T extends object, K extends keyof T> {
@@ -154,3 +176,5 @@ class ObjectRefImpl<T extends object, K extends keyof T> {
   }
 }
 ```
+
+:::
