@@ -109,6 +109,7 @@ export const sidebar = () => {
           { text: 'Flex 布局教程', link: 'flex-layout-tutorial' },
           { text: 'CSS 滚动驱动动画', link: 'css-scroll-driven-animations' },
           { text: 'CSS prefers-color-scheme 媒体特性', link: 'css-prefers-color-scheme' },
+          { text: 'CSS at-rule 特性检测', link: 'css-at-rule-feature-detection' },
         ],
       },
       {
