@@ -11,6 +11,6 @@
     "jsx": "preserve",
     "lib": ["ESNext", "DOM"],
     "types": ["vitepress/types", "vite/client"],
-    "typeRoots": ["./node_modules/@types/"]
+    "typeRoots": ["../../node_modules/"]
   }
 }
