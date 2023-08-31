@@ -22,7 +22,7 @@ header .content-body {
   transition: none !important;
 }
 
-@supports (height: 100svh;) {
+@supports (height: 100svh) {
   body.fixed {
     position: fixed;
     height: 100svh;
