@@ -31,6 +31,14 @@ export const sidebar = () => {
         ],
       },
       {
+        text: 'HTTP TCP IP',
+        collapsed: true,
+        base: '/notes/http-tcp-ip/',
+        items: [
+          { text: 'HTTP 的 Server Send Event', link: 'http-server-send-event' },
+        ],
+      },
+      {
         text: 'Babel',
         collapsed: true,
         base: '/notes/babel/',
