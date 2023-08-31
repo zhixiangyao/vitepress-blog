@@ -22,6 +22,7 @@ type Props = {
 const props = defineProps<Props>()
 
 const useRain = (bg: BG) => {
+  const { isDark } = useData()
   const canvasRef = ref<HTMLCanvasElement>()
   let raindropFx: InstanceType<typeof window.RaindropFX>
   const url = 'https://yaozhixiang.top/assets/js/RaindropFX.js'
@@ -31,6 +32,7 @@ const useRain = (bg: BG) => {
     if (!raindropFx) return
 
     const rect = canvasRef.value!.getBoundingClientRect()
+
     raindropFx.resize(rect.width, rect.height)
   }
 
@@ -97,32 +99,34 @@ const useRain = (bg: BG) => {
     }
   }
 
+  const watched = watch(isDark, () => {
+    switchRain()
+  })
+
   onMounted(() => {
     removeRainScript(url)
 
     loadExternalResource(url, 'js').then(() => {
       initRain()
     })
-  })
 
-  watch(isDark, () => {
-    switchRain()
-  })
-
-  onMounted(() => {
     window.addEventListener('resize', resizeRain)
   })
+
   onBeforeUnmount(() => {
+    watched()
+
     window.removeEventListener('resize', resizeRain)
   })
 
   return { canvasRef }
 }
 
-const { isDark } = useData()
 const { canvasRef } = useRain(props.bg)
 </script>
 
 <template>
-  <canvas class="fixed inset-0 -z-[1] w-full h-full" ref="canvasRef" id="rain"></canvas>
+  <Teleport to="body">
+    <canvas class="fixed inset-0 w-full h-full translate-x-0" ref="canvasRef" id="rain" />
+  </Teleport>
 </template>

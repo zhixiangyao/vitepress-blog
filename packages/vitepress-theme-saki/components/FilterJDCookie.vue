@@ -24,7 +24,7 @@ const filter = () => {
 
   if (cookieValue) {
     state.filteredJDCookie = encodeURI(cookieValue)
-    window.copy && window.copy(state.filteredJDCookie)
+    window.copy?.(state.filteredJDCookie)
     state.msg = '过滤成功'
   } else {
     state.filteredJDCookie = ''

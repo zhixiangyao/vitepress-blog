@@ -60,8 +60,7 @@ class RaindropFX {
 
 declare global {
   interface Window {
-    copy(e: string): void
-    initWidget(options: { waifuPath: string; apiPath: string; cdnPath?: string }): unknown
+    copy?: (e: string) => void
     RaindropFX: typeof RaindropFX
     dataLayer: any[]
   }
