@@ -32,7 +32,8 @@ export default defineConfig({
     nav: nav(),
     sidebar: sidebar(),
     footer: {
-      copyright: 'Copyright © 2019-present <a href="https://github.com/zhixiangyao">Zhixiang Yao</a>',
+      copyright:
+        'Copyright © 2019-present <a href="https://github.com/zhixiangyao">Zhixiang Yao</a>',
     },
     search: {
       provider: 'local',
@@ -55,6 +56,7 @@ export default defineConfig({
     ['link', { rel: 'shortcut icon', href: '/favicons/favicon.ico' }],
     ['meta', { name: 'msapplication-TileColor', content: '#3a0839' }],
     ['meta', { name: 'msapplication-config', content: '/favicons/browserconfig.xml' }],
-    ['meta', { name: 'theme-color', content: '#ffffff' }],
+    ['meta', { name: 'theme-color', content: '#ffffff', media: '(prefers-color-scheme: light)' }],
+    ['meta', { name: 'theme-color', content: '#1b1b1f', media: '(prefers-color-scheme: dark)' }],
   ],
 })
