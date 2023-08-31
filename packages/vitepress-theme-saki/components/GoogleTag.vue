@@ -15,8 +15,10 @@ const init = () => {
   gtag('config', 'G-1E9XR885EH')
 }
 
-onMounted(() => {
-  loadExternalResource('https://www.googletagmanager.com/gtag/js?id=G-1E9XR885EH', 'js')
-  init()
-})
+if (!import.meta.env.SSR) {
+  onMounted(() => {
+    loadExternalResource('https://www.googletagmanager.com/gtag/js?id=G-1E9XR885EH', 'js')
+    init()
+  })
+}
 </script>

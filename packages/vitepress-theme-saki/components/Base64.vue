@@ -3,7 +3,7 @@ import { reactive, ref, watch } from 'vue'
 import VPSwitch from './ui/VPSwitch.vue'
 
 defineOptions({
-  name: 'Base64DecodeEncode',
+  name: 'Base64',
 })
 
 const decode = ref(true)

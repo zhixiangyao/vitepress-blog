@@ -18,9 +18,11 @@ const props = defineProps<Props>()
 
 const imgRef = ref<HTMLImageElement>()
 
-onMounted(() => {
-  mediumZoom(imgRef.value, { background: 'var(--vp-c-bg)' })
-})
+if (!import.meta.env.SSR) {
+  onMounted(() => {
+    mediumZoom(imgRef.value, { background: 'var(--vp-c-bg)' })
+  })
+}
 </script>
 
 <template>
