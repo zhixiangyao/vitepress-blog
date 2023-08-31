@@ -9,7 +9,7 @@ const { Layout } = DefaultTheme
 <template>
   <GoogleTag />
 
-  <Layout />
+  <Layout class="layout" />
 </template>
 
 <style>
@@ -20,5 +20,22 @@ const { Layout } = DefaultTheme
 /* fix vision error */
 header .content-body {
   transition: none !important;
+}
+
+@supports (height: 100svh;) {
+  body.fixed {
+    position: fixed;
+    height: 100svh;
+    overflow: hidden;
+  }
+
+  body.fixed .layout {
+    min-height: 100svh;
+  }
+
+  body.fixed .layout footer {
+    border: transparent;
+    background-color: transparent;
+  }
 }
 </style>

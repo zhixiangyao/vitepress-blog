@@ -111,12 +111,14 @@ const useRain = (bg: BG) => {
     })
 
     window.addEventListener('resize', resizeRain)
+    document.body.classList.add('fixed')
   })
 
   onBeforeUnmount(() => {
     watched()
 
     window.removeEventListener('resize', resizeRain)
+    document.body.classList.remove('fixed')
   })
 
   return { canvasRef }
