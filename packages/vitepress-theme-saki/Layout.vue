@@ -14,7 +14,6 @@ const { Layout } = DefaultTheme
 
 <style>
 :root {
-  height: 100svh;
   overflow-y: scroll;
 }
 
