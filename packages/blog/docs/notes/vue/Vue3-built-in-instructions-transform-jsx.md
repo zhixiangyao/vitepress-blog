@@ -4,7 +4,7 @@
 
 - **template:**
 
-```html
+```vue
 <span v-text="msg"></span>
 <!-- 等价于 -->
 <span>{{msg}}</span>
@@ -28,7 +28,7 @@ h('span', { textContent: msg }, null)
 
 - **template:**
 
-```html
+```vue
 <div v-html="html"></div>
 ```
 
@@ -48,7 +48,7 @@ h('div', { innerHTML: msg }, null)
 
 - **template:**
 
-```html
+```vue
 <div v-show="show"></div>
 ```
 
@@ -68,7 +68,7 @@ h('div', { style: !show && 'display: none;' }, null)
 
 - **template:**
 
-```html
+```vue
 <div v-if="true"></div>
 ```
 
@@ -88,7 +88,7 @@ true && h('div', null, null)
 
 - **template:**
 
-```html
+```vue
 <div v-if="type === 'A'">A</div> <div v-else>B</div>
 ```
 
@@ -108,7 +108,7 @@ type === 'A' ? h('div', null, 'A') : h('div', null, 'B')
 
 - **template:**
 
-```html
+```vue
 <div v-if="type === 'A'">A</div>
 <div v-else-if="type === 'B'">B</div>
 <div v-else-if="type === 'C'">C</div>
@@ -147,7 +147,7 @@ const component = () =>
 
 - **template:**
 
-```html
+```vue
 <div v-for="item in items" :key="item.id"> {{ item.text }} </div>
 ```
 
@@ -169,7 +169,7 @@ items.map(({ id, text }) => h('div', { id }, text))
 
 - **template:**
 
-```html
+```vue
 <a v-model="model" />
 <b v-model.modifier="model" />
 <C v-model:argument.modifier="model" />
