@@ -108,7 +108,7 @@ export const sidebar = () => {
         ],
       },
       {
-        text: 'Css',
+        text: 'CSS',
         collapsed: true,
         base: '/notes/css/',
         items: [
@@ -128,6 +128,7 @@ export const sidebar = () => {
           { text: '上传文件到 Linux', link: 'upload-files-to-linux' },
           { text: 'htop', link: 'htop' },
           { text: 'vi/vim', link: 'vi-vim' },
+          { text: '文件链接方式', link: 'file-link-methods' },
         ],
       },
       {
