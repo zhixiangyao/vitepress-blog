@@ -78,6 +78,7 @@ export const sidebar = () => {
         base: '/notes/vue/',
         items: [
           { text: 'Vue2 生命周期基础知识', link: 'vue2-lifecycle-basics' },
+          { text: 'Vue3 生命周期基础知识', link: 'vue3-lifecycle-basics' },
           { text: 'Vue2 生命周期源码解析', link: 'vue2-lifecycle-source-code-parsing' },
           { text: 'Vue2 数据观察更新原理', link: 'vue2-data-observer-principle' },
           {
