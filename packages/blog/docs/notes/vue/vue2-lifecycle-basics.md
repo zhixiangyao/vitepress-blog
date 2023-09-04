@@ -1,4 +1,4 @@
-# Vue2-生命周期基础知识
+# Vue2 生命周期基础知识
 
 ## 基础知识
 
@@ -17,7 +17,7 @@
 :::
 <!-- prettier-ignore-end -->
 
-### [生命周期图](https://v2.vuejs.org/v2/guide/instance.html#Lifecycle-Diagram)
+## [生命周期图](https://v2.vuejs.org/v2/guide/instance.html#Lifecycle-Diagram)
 
 下图展示了实例的生命周期。
 

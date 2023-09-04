@@ -68,7 +68,7 @@ export const sidebar = () => {
         base: '/notes/typescript/',
         items: [
           { text: 'Type Challenge', link: 'type-challenge' },
-          { text: 'TS装饰器产物分析', link: 'ts-decorator-product-analysis' },
+          { text: 'TS 装饰器产物分析', link: 'ts-decorator-product-analysis' },
         ],
       },
       {
@@ -76,14 +76,14 @@ export const sidebar = () => {
         collapsed: true,
         base: '/notes/vue/',
         items: [
-          { text: 'Vue2-生命周期基础知识', link: 'vue2-lifecycle-basics' },
-          { text: 'Vue2-生命周期源码解析', link: 'vue2-lifecycle-source-code-parsing' },
-          { text: 'Vue2-数据观察更新原理', link: 'vue2-data-observer-principle' },
+          { text: 'Vue2 生命周期基础知识', link: 'vue2-lifecycle-basics' },
+          { text: 'Vue2 生命周期源码解析', link: 'vue2-lifecycle-source-code-parsing' },
+          { text: 'Vue2 数据观察更新原理', link: 'vue2-data-observer-principle' },
           {
-            text: 'Vue3-常用内置指令转 jsx 写法',
+            text: 'Vue3 常用内置指令转 jsx 写法',
             link: 'Vue3-built-in-instructions-transform-jsx',
           },
-          { text: 'Vue3-toRefs 源码分析', link: 'vue3-to-refs-source-code-parsing' },
+          { text: 'Vue3 toRefs 源码分析', link: 'vue3-to-refs-source-code-parsing' },
         ],
       },
       {
