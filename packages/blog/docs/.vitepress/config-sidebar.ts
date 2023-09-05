@@ -28,15 +28,14 @@ export const sidebar = () => {
           { text: '位运算符', link: 'bit-operator' },
           { text: '函数防抖', link: 'debounce' },
           { text: '函数柯里化', link: 'currying' },
+          { text: 'JS 中的闭包是什么', link: 'what-is-the-closure-in-js' },
         ],
       },
       {
         text: 'HTTP TCP IP',
         collapsed: true,
         base: '/notes/http-tcp-ip/',
-        items: [
-          { text: 'HTTP 的 Server Send Event', link: 'http-server-send-event' },
-        ],
+        items: [{ text: 'HTTP 的 Server Send Event', link: 'http-server-send-event' }],
       },
       {
         text: 'Babel',
