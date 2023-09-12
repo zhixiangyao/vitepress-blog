@@ -29,6 +29,7 @@ export const sidebar = () => {
           { text: '函数防抖', link: 'debounce' },
           { text: '函数柯里化', link: 'currying' },
           { text: 'JS 中的闭包是什么', link: 'what-is-the-closure-in-js' },
+          { text: '标记语句', link: 'labeled-statement' },
         ],
       },
       {
