@@ -34,7 +34,6 @@
 const isSupport = CSS.supports('height', '100svh')
 ```
 
-
 ## 参考
 
 - [MDN Supports](https://developer.mozilla.org/zh-CN/docs/Web/CSS/@supports)

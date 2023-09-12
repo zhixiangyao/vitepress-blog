@@ -35,13 +35,13 @@ myVariable = { propB: 'Hello' } // 不合法，缺少 propA 属性
 - 原始类型（`Primitive Types`）表示最基本的数据类型，包括 `number`、`string`、`boolean`、`null`、`undefined`、`symbol` 和 `bigint`。
 
 ```ts
-let myNumber: number = 10;
-let myString: string = "Hello";
-let myBoolean: boolean = true;
-let myNull: null = null;
-let myUndefined: undefined = undefined;
-let mySymbol: symbol = Symbol();
-let myBigInt: bigint = BigInt(10);
+let myNumber: number = 10
+let myString: string = 'Hello'
+let myBoolean: boolean = true
+let myNull: null = null
+let myUndefined: undefined = undefined
+let mySymbol: symbol = Symbol()
+let myBigInt: bigint = BigInt(10)
 ```
 
 ## 区别

@@ -89,7 +89,8 @@ true && h('div', null, null)
 - **template:**
 
 ```vue
-<div v-if="type === 'A'">A</div> <div v-else>B</div>
+<div v-if="type === 'A'">A</div>
+<div v-else>B</div>
 ```
 
 - **jsx/tsx:**
