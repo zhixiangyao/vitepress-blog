@@ -36,7 +36,7 @@ const props = withDefaults(defineProps<Props>(), {
 <style scoped>
 .switch[aria-checked='false'] :deep(.check) {
   /* rtl:ignore */
-  @apply translate-x-[18px];
+  transform: translateX(18px);
 }
 
 .dark .switch .icon path {
