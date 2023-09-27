@@ -46,6 +46,14 @@ const members = [
     ]
   },
   {
+    avatar: '/friend-link-images/zhuzhu.png',
+    name: '猪猪',
+    title: 'Friend',
+    links: [
+      { icon: 'yuque', link: 'https://www.yuque.com/zhuzhu-lr3z5' },
+    ]
+  },
+  {
     avatar: 'https://www.github.com/yyx990803.png',
     name: 'Evan You',
     title: 'Friend',
