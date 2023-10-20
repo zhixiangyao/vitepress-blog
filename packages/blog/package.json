@@ -8,7 +8,7 @@
     "docs:serve": "vitepress serve docs"
   },
   "devDependencies": {
-    "vitepress-theme-saki": "workspace:0.1.0"
+    "vitepress-theme-saki": "workspace:*"
   },
   "postcss": {
     "plugins": {
