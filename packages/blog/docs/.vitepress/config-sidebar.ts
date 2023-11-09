@@ -131,6 +131,7 @@ export const sidebar = () => {
           { text: 'htop', link: 'htop' },
           { text: 'vi/vim', link: 'vi-vim' },
           { text: '文件链接方式', link: 'file-link-methods' },
+          { text: '检查磁盘扇区状态', link: 'check-disk-sectors-status' },
         ],
       },
       {
