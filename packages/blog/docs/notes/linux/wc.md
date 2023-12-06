@@ -1,6 +1,8 @@
 # wc
 
-[wc](https://www.redhat.com/sysadmin/linux-wc-command) 是 `word count` 的缩写，它是一个 Unix 和类 Unix 系统中的命令，用于统计文件中的字数、行数和字符数。其基本语法是：
+[wc](https://www.redhat.com/sysadmin/linux-wc-command) 是 `word count` 的缩写，它是一个 Unix 和类 Unix 系统中的命令，用于统计文件中的字数、行数和字符数。
+
+其基本语法是：
 
 ```bash
 wc [选项] 文件名
