@@ -128,6 +128,7 @@ export const sidebar = () => {
         base: '/notes/linux/',
         items: [
           { text: '上传文件到 Linux', link: 'upload-files-to-linux' },
+          { text: 'wc', link: 'wc' },
           { text: 'htop', link: 'htop' },
           { text: 'vi/vim', link: 'vi-vim' },
           { text: '文件链接方式', link: 'file-link-methods' },
