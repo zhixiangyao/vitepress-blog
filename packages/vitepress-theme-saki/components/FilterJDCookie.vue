@@ -15,7 +15,7 @@ const getToken = (text: string) => {
   const CV = text
   const pin = CV.match(/pt_pin=.+?;/)?.[0] ?? ''
   const key = CV.match(/pt_key=.+?;/)?.[0] ?? ''
-  const CookieValue = pin + key ?? ''
+  const CookieValue = pin + key
   return CookieValue
 }
 
