@@ -138,10 +138,10 @@ const component = () =>
   type === 'A'
     ? h('div', null, 'A')
     : type === 'B'
-    ? h('div', null, 'B')
-    : type === 'C'
-    ? h('div', null, 'C')
-    : h('div', null, 'D')
+      ? h('div', null, 'B')
+      : type === 'C'
+        ? h('div', null, 'C')
+        : h('div', null, 'D')
 ```
 
 ## `v-for`
