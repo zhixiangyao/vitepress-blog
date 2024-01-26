@@ -1,6 +1,6 @@
-# vitepress-blog
+# Vitepress Blog
 
-- VS Code Extension:
+- VSCode Extension:
 
   - [Code Spell Checker](https://marketplace.visualstudio.com/items?itemName=streetsidesoftware.code-spell-checker)
   - [ESLint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint)
@@ -13,4 +13,4 @@
   npm i -g pnpm
   ```
 
-- Preview: https://blog.yaozhixiang.top & https://zhixiangyao.github.io/ 
+- Preview: https://blog.yaozhixiang.top & https://zhixiangyao.github.io/

@@ -5,7 +5,6 @@
 .vite
 node_modules
 dist
-dist-ssr
 public
 docs
 
