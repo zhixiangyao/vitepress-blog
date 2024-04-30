@@ -137,6 +137,12 @@ export const sidebar = () => {
         ],
       },
       {
+        text: 'macOS',
+        collapsed: true,
+        base: '/notes/macos/',
+        items: [{ text: '在 macOS 中从后台列表中删除已删除的应用程序', link: 'remove-deleted-apps-from-the-background-list' }],
+      },
+      {
         text: 'Git',
         collapsed: true,
         base: '/notes/git/',
