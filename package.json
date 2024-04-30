@@ -2,10 +2,12 @@
   "name": "vitepress-blog",
   "description": "Blog",
   "keywords": [
+    "zhixiangyao",
     "blog",
     "vitepress",
     "vue",
-    "pnpm"
+    "pnpm",
+    "monorepo"
   ],
   "author": "zhixiangyao <blueskyzx@icloud.com> <https://github.com/zhixiangyao>",
   "repository": {
@@ -50,7 +52,7 @@
     }
   },
   "engines": {
-    "node": ">=18",
-    "pnpm": ">=8"
+    "node": ">=22",
+    "pnpm": ">=9"
   }
 }
