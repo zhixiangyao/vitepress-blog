@@ -37,10 +37,10 @@ if (!import.meta.env.SSR) {
 
 <style>
 .medium-zoom-overlay {
-  @apply z-20;
+  @apply z-50;
 }
 
 .medium-zoom-image {
-  @apply z-30;
+  @apply z-[60];
 }
 </style>
