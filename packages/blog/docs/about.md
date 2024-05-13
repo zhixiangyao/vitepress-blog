@@ -5,12 +5,12 @@
 ## 📜 Target
 
 - 🚶 The first step is as good as half over
-- 🚀 2023 Goals:
-  - Learn English
+- 🚀 2024 Goals:
+  - Learn English(use Duolingo)
   - TypeScript
   - Vue 3.x
   - React 18.x
-  - Limit weight to 70KG (Current 75KG)
+  - Limit weight to 70KG (Current 73KG)
   - Smooth muscle up (I can only do 5 right now)
 - ❤️ Fun fact:
   - Watching Anime
