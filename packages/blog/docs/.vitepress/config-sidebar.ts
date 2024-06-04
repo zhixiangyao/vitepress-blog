@@ -70,6 +70,7 @@ export const sidebar = () => {
           { text: 'Type Challenge', link: 'type-challenge' },
           { text: 'TS 装饰器产物分析', link: 'ts-decorator-product-analysis' },
           { text: 'type 对比 interface', link: 'type-vs-interface' },
+          { text: 'IoC 和 DI', link: 'ioc-and-di' },
         ],
       },
       {
