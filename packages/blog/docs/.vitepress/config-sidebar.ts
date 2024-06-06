@@ -171,6 +171,17 @@ export const sidebar = () => {
           },
         ],
       },
+      {
+        text: 'Other',
+        collapsed: true,
+        base: '/notes/other/',
+        items: [
+          {
+            text: '符号 ^',
+            link: 'symbol-caret',
+          },
+        ],
+      },
     ],
     '/tools/': [
       { text: '过滤 JD Cookie', base: '/tools/', link: 'filter-jd-cookie' },
