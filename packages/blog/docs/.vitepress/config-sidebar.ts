@@ -135,7 +135,7 @@ export const sidebar = () => {
           { text: 'vi/vim', link: 'vi-vim' },
           { text: '文件链接方式', link: 'file-link-methods' },
           { text: '检查磁盘扇区状态', link: 'check-disk-sectors-status' },
-          { text: '常见 terminal 快捷键', link: 'common-terminal-shortcuts' },
+          { text: '常见 Terminal 快捷键', link: 'common-terminal-shortcuts' },
         ],
       },
       {
