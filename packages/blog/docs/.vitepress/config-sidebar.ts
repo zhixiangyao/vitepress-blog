@@ -121,6 +121,7 @@ export const sidebar = () => {
           { text: 'CSS 滚动驱动动画', link: 'css-scroll-driven-animations' },
           { text: 'CSS prefers-color-scheme 媒体特性', link: 'css-prefers-color-scheme' },
           { text: 'CSS at-rule 特性检测', link: 'css-at-rule-feature-detection' },
+          { text: ':is 伪类', link: 'is-pseudo-class' },
         ],
       },
       {
