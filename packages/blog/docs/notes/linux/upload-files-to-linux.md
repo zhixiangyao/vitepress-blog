@@ -17,7 +17,7 @@ sftp root@xx.xx.xx.xx
 ## **查看工作路径:**
 
 - `pwd` `(print working directory)` 查看远程当前工作路径
-- `lpwd` `(local print working directory)` 查看远程当前工作路径
+- `lpwd` `(local print working directory)` 查看本地当前工作路径
 
 ```bash
 sftp> pwd
