@@ -1,4 +1,4 @@
-# 在 typescript 中 IoC 和 DI 分别是什么?有什么关系
+# 在 Typescript 中 IoC 和 DI 分别是什么?有什么关系
 
 ## 概念
 
