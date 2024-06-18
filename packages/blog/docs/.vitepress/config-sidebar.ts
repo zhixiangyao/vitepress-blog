@@ -182,6 +182,10 @@ export const sidebar = () => {
             text: '符号 ^',
             link: 'symbol-caret',
           },
+          {
+            text: '什么是 URL、URI 和 URN?',
+            link: 'url-urn-uri',
+          },
         ],
       },
     ],
