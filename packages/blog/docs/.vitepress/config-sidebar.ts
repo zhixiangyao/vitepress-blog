@@ -160,7 +160,10 @@ export const sidebar = () => {
         text: 'English',
         collapsed: true,
         base: '/notes/english/',
-        items: [{ text: '缩写', link: 'abbreviation' }],
+        items: [
+          { text: '缩写', link: 'abbreviation' },
+          { text: '人称代词总结', link: 'personal-pronouns-summary' },
+        ],
       },
       {
         text: 'Algolia',
