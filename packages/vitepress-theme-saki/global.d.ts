@@ -44,7 +44,7 @@ interface RenderOptions {
 
 interface RaindropFXOptions extends SimulatorOptions, RenderOptions {}
 
-class RaindropFX {
+declare class RaindropFX {
   public options: Options
   public renderer: RaindropRenderer
   public simulator: RaindropSimulator
