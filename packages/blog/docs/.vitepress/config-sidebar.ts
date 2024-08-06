@@ -84,7 +84,7 @@ export const sidebar = () => {
           { text: 'Vue2 数据观察更新原理', link: 'vue2-data-observer-principle' },
           {
             text: 'Vue3 常用内置指令转 jsx 写法',
-            link: 'Vue3-built-in-instructions-transform-jsx',
+            link: 'vue3-built-in-instructions-transform-jsx',
           },
           { text: 'Vue3 toRefs 源码分析', link: 'vue3-to-refs-source-code-parsing' },
         ],
