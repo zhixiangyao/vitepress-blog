@@ -108,6 +108,10 @@ export const sidebar = () => {
             text: 'useLayoutEffect 对比 useEffect',
             link: 'useLayoutEffect-vs-useEffect',
           },
+          {
+            text: '禁用 @monaco-editor/react 的右键菜单',
+            link: 'disable-monaco-context-menu',
+          },
         ],
       },
       {
