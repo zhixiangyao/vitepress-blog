@@ -1,4 +1,5 @@
 import DefaultTheme from 'vitepress/theme'
+import type { EnhanceAppContext, Theme } from 'vitepress'
 
 import Layout from './Layout.vue'
 
@@ -9,11 +10,9 @@ import Rain from './components/Rain.vue'
 import ZoomImg from './components/ZoomImg.vue'
 import FriendLinks from './components/FriendLinks.vue'
 
-type Theme = typeof DefaultTheme
-
-export default <Theme>{
-  ...DefaultTheme,
-  enhanceApp(ctx) {
+const theme: Theme = {
+  extends: DefaultTheme,
+  enhanceApp(ctx: EnhanceAppContext): void {
     // extend default theme custom Behaviour.
     DefaultTheme.enhanceApp(ctx)
 
@@ -27,3 +26,5 @@ export default <Theme>{
   },
   Layout,
 }
+
+export default theme
