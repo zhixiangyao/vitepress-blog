@@ -15,6 +15,7 @@ export default defineConfig({
   lastUpdated: true,
   outDir: '../dist',
   cacheDir: './.vitepress/.vite',
+  cleanUrls: true,
 
   themeConfig: {
     siteTitle: 'Zhixiang Yao',
