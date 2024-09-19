@@ -4,60 +4,9 @@
 
 ## Demo
 
-[Online Preview](/scroll-progress-timeline.html){target="_self"}
+[Online Preview](/scroll-progress-timeline.html){target="\_self"}
 
 <ZoomImg src="/scroll_progress_timeline.gif" width="250" height="418" />
-
-```html
-<body>
-  <main>
-    <div class="progress"></div>
-    <div class="block"></div>
-    <div class="block"></div>
-    <div class="block"></div>
-  </main>
-</body>
-```
-
-```css
-body {
-  margin: 0;
-}
-
-main {
-  height: 100vh;
-  width: 100vw;
-  overflow: scroll;
-
-  scroll-timeline: --scroller block;
-}
-
-.progress {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 10px;
-  background-color: #f44336;
-  transform-origin: 0 50%;
-  animation: grow-progress 3s linear;
-  animation-timeline: --scroller;
-}
-
-@keyframes grow-progress {
-  from {
-    transform: scaleX(0);
-  }
-  to {
-    transform: scaleX(1);
-  }
-}
-
-.block {
-  width: 500px;
-  height: 1000px;
-}
-```
 
 ## 滚动进度时间线（Scroll progress timeline）
 
@@ -96,5 +45,59 @@ main {
   animation-timeline: scroll(block nearest); /* 默认 */
   animation-timeline: scroll(inline root);
   animation-timeline: scroll(x self);
+}
+```
+
+## 完整代码
+
+```html
+<body>
+  <main>
+    <div class="progress"></div>
+    <div class="block"></div>
+    <div class="block"></div>
+    <div class="block"></div>
+  </main>
+</body>
+```
+
+```css
+body {
+  margin: 0;
+}
+
+main {
+  height: 100vh;
+  width: 100vw;
+  overflow: scroll;
+
+  scroll-timeline: --scroller block;
+}
+
+.progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 10px;
+  background-color: #f44336;
+  transform-origin: 0 50%;
+  animation: grow-progress 3s linear;
+  /* 这里必须使用命名的 scroll-timeline-name  而不是 scroll()，因为 progress 是 fixed 定位，父亲容器是 body 而不是 main */
+  animation-timeline: --scroller;
+}
+
+@keyframes grow-progress {
+  from {
+    transform: scaleX(0);
+  }
+  to {
+    transform: scaleX(1);
+  }
+}
+
+.block {
+  width: 500px;
+  height: 1000px;
 }
 ```
