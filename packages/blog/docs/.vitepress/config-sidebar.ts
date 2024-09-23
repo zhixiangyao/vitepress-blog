@@ -72,6 +72,7 @@ export const sidebar = () => {
           { text: 'type 对比 interface', link: 'type-vs-interface' },
           { text: 'IoC 和 DI', link: 'ioc-and-di' },
           { text: '协变 & 逆变 & 不变', link: 'covariant-contravariant-invariant' },
+          { text: '解释类型工具 IfEquals', link: 'Interpretation-type-tool-isequals' },
         ],
       },
       {
