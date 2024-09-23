@@ -12,11 +12,29 @@
   - `Carriage Return` `Line Feed` 是由两个 `ASCII` 字符组成，分别是回车符 (`Carriage Return`，`CR`，十进制值为 `13`) 和换行符 `LF`。
   - 在 `Windows` 系统中，通常使用 `CRLF` 作为行尾序列，表示一行的结束。
 
+- `CPU`：`Central Processing Unit`，中央处理器/处理器。
+
+- `GPU`：`Graphics Processing Unit`，图形处理器/显卡。
+
+- `SSD`：`Solid State Drive`，固态硬盘。
+
+- `FPS`：`Frames Per Second`，每秒帧数。
+
+- `FPS`：`First-Person Shooter`，第一人称射击游戏。
+
+- `MOBA`：` Multiplayer Online Battle Arena`，多人在线战术竞技场游戏。
+
+- `IP`：`Internet Protocol`，互联网协议/ip 地址。
+
+- `TCP`：`Transmission Control Protocol`，传输控制协议。
+
 ## 日常
 
 - `ETC`：`et cetera`，即**等等**的意思，来源于拉丁语 `et cētera`。
 
 - `ASAP`：`As Soon As Possible`，尽快。
+
+- `AFAIK`：`As Far As I Know`，据我所知。
 
 - `FYI`：`For Your Information`，供您参考。
 
@@ -73,3 +91,5 @@
 - `RA`：`Requirements Analysis`，需求分析。
 
 - `QA`：`Quality Assurance`，质量保证。
+
+- `HC`：`Head count`，通常在招聘或人力资源方面用来表示一个公司、团队或项目的人员编制或职位数量。
