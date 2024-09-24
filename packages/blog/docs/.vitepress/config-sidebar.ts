@@ -11,6 +11,19 @@ export const sidebar = () => {
     ],
     '/notes/': [
       {
+        text: 'TypeScript',
+        collapsed: true,
+        base: '/notes/typescript/',
+        items: [
+          { text: '协变 & 逆变 & 不变', link: 'covariant-contravariant-invariant' },
+          { text: 'Type Challenge', link: 'type-challenge' },
+          { text: 'TS 装饰器产物分析', link: 'ts-decorator-product-analysis' },
+          { text: 'type 对比 interface', link: 'type-vs-interface' },
+          { text: 'IoC 和 DI', link: 'ioc-and-di' },
+          { text: '解释类型工具 IfEquals', link: 'Interpretation-type-tool-isequals' },
+        ],
+      },
+      {
         text: 'JavaScript',
         collapsed: true,
         base: '/notes/javascript/',
@@ -60,19 +73,6 @@ export const sidebar = () => {
           { text: 'Commonjs 模块原理', link: 'commonjs-module-principle' },
           { text: 'ES Module 模块原理', link: 'esm-module-principle' },
           { text: 'ES Module 静态分析', link: 'esm-static-analysis' },
-        ],
-      },
-      {
-        text: 'TypeScript',
-        collapsed: true,
-        base: '/notes/typescript/',
-        items: [
-          { text: 'Type Challenge', link: 'type-challenge' },
-          { text: 'TS 装饰器产物分析', link: 'ts-decorator-product-analysis' },
-          { text: 'type 对比 interface', link: 'type-vs-interface' },
-          { text: 'IoC 和 DI', link: 'ioc-and-di' },
-          { text: '协变 & 逆变 & 不变', link: 'covariant-contravariant-invariant' },
-          { text: '解释类型工具 IfEquals', link: 'Interpretation-type-tool-isequals' },
         ],
       },
       {

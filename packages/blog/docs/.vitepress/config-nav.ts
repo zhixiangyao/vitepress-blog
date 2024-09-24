@@ -10,7 +10,7 @@ export const nav = (): Nav => {
     },
     {
       text: 'Notes',
-      link: '/notes/javascript/es6-class-extends-mock',
+      link: '/notes/typescript/covariant-contravariant-invariant',
     },
     {
       text: 'Tools',
