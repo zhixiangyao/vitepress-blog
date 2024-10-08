@@ -8,7 +8,7 @@ hero:
   actions:
     - theme: brand
       text: Read Blog
-      link: /notes/javascript/es6-class-extends-mock
+      link: /notes/typescript/covariant-contravariant-invariant
     - theme: brand
       text: Blog List
       link: /list
