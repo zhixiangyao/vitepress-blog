@@ -114,6 +114,10 @@ export const sidebar = () => {
             text: '禁用 @monaco-editor/react 的右键菜单',
             link: 'disable-monaco-context-menu',
           },
+          {
+            text: 'React Fiber 的概念与工作原理',
+            link: 'introduces-fiber-concept',
+          },
         ],
       },
       {
