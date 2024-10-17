@@ -2,13 +2,13 @@
 
 ## 源码解析
 
-### 为什么 Vue 生命周期不能使用箭头 ➡️ 函数？
+### 为什么 `Vue2` 生命周期不能使用箭头 ➡️ 函数？
 
 让我们一起来看看源码吧。
 
 位置：[src/core/instance/lifecycle.js 第 336 行](https://github.com/vuejs/vue/blob/dev/src/core/instance/lifecycle.js#L336)
 
-```js
+```js{10}
 /* @flow */
 // 回调钩子
 export function callHook(vm: Component, hook: string) {
@@ -30,7 +30,7 @@ export function callHook(vm: Component, hook: string) {
 
 位置：[src/core/util/error.js 第 36 行](https://github.com/vuejs/vue/blob/dev/src/core/util/error.js#L36)
 
-```js
+```js{13}
 /* @flow */
 // 调用错误处理
 export function invokeWithErrorHandling(
@@ -57,10 +57,10 @@ export function invokeWithErrorHandling(
 }
 ```
 
-- 第一段中的 **callHook** 调用了第二段的 **invokeWithErrorHandling**方法
-- 在**invokeWithErrorHandling**方法中，使用了 apply 和 call 改变了生命周期内 this 指向
+- 第一段中的 **`callHook`** 调用了第二段的 **`invokeWithErrorHandling`** 方法
+- 在 **`invokeWithErrorHandling`** 方法中，使用了 apply 和 call 改变了生命周期内 this 指向
 - 而在箭头函数中 this 指向是无法改变的
-- 所以这我们在写 vue 代码时，生命周期不能使用 ➡️ 箭头函数
+- 所以这我们在写 `Vue2` 代码时，生命周期不能使用 ➡️ 箭头函数
 
 ### 一、beforeCreate 和 created
 
