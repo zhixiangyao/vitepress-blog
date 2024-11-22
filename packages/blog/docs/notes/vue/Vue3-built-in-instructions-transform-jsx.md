@@ -2,123 +2,109 @@
 
 ## `v-text`
 
-- **template:**
+::: code-group
 
-```vue
+```vue [template]
 <span v-text="msg"></span>
 <!-- 等价于 -->
-<span>{{msg}}</span>
+<span>{{ msg }}</span>
 ```
 
-- **jsx/tsx:**
-
-```jsx
+```tsx [jsx/tsx]
 <span v-text={msg} />
 ```
 
-- **renderFunction:**
-
-```jsx
+```jsx [renderFunction]
 h('span', { textContent: msg }, null)
 ```
 
-<!-- more -->
+:::
 
 ## `v-html`
 
-- **template:**
+::: code-group
 
-```vue
+```vue [template]
 <div v-html="html"></div>
 ```
 
-- **jsx/tsx:**
-
-```jsx
+```tsx [jsx/tsx]
 <div v-html={html} />
 ```
 
-- **renderFunction:**
-
-```jsx
+```jsx [renderFunction]
 h('div', { innerHTML: msg }, null)
 ```
 
+:::
+
 ## `v-show`
 
-- **template:**
+::: code-group
 
-```vue
+```vue [template]
 <div v-show="show"></div>
 ```
 
-- **jsx/tsx:**
-
-```jsx
+```tsx [jsx/tsx]
 <div v-show={show} />
 ```
 
-- **renderFunction:**
-
-```jsx
+```jsx [renderFunction]
 h('div', { style: !show && 'display: none;' }, null)
 ```
 
+:::
+
 ## `v-if`
 
-- **template:**
+::: code-group
 
-```vue
+```vue [template]
 <div v-if="true"></div>
 ```
 
-- **jsx/tsx:**
-
-```jsx
+```tsx [jsx/tsx]
 true && <div />
 ```
 
-- **renderFunction:**
-
-```jsx
+```jsx [renderFunction]
 true && h('div', null, null)
 ```
 
+:::
+
 ## `v-else`
 
-- **template:**
+::: code-group
 
-```vue
+```vue [template]
 <div v-if="type === 'A'">A</div>
 <div v-else>B</div>
 ```
 
-- **jsx/tsx:**
-
-```jsx
+```tsx [jsx/tsx]
 type === 'A' ? <div>A</div> : <div>B</div>
 ```
 
-- **renderFunction:**
-
-```jsx
+```jsx [renderFunction]
 type === 'A' ? h('div', null, 'A') : h('div', null, 'B')
 ```
 
+:::
+
 ## `v-else-if`
 
-- **template:**
+::: code-group
 
-```vue
+```vue [template]
 <div v-if="type === 'A'">A</div>
 <div v-else-if="type === 'B'">B</div>
 <div v-else-if="type === 'C'">C</div>
 <div v-else>D</div>
 ```
 
-- **jsx/tsx:**
-
-```jsx
+```tsx [jsx/tsx]
 const component = () =>
   type === 'A' ? (
     <div>A</div>
@@ -131,9 +117,7 @@ const component = () =>
   )
 ```
 
-- **renderFunction:**
-
-```jsx
+```jsx [renderFunction]
 const component = () =>
   type === 'A'
     ? h('div', null, 'A')
@@ -144,49 +128,43 @@ const component = () =>
         : h('div', null, 'D')
 ```
 
+:::
+
 ## `v-for`
 
-- **template:**
+::: code-group
 
-```vue
+```vue [template]
 <div v-for="item in items" :key="item.id"> {{ item.text }} </div>
 ```
 
-- **jsx/tsx:**
-
-```jsx
+```jsx [jsx/tsx]
 items.map(({ id, text }) => <div key={id}>{text}</div>)
 ```
 
-- **renderFunction:**
-
-```jsx
+```jsx [renderFunction]
 items.map(({ id, text }) => h('div', { id }, text))
 ```
 
+:::
+
 ## `v-model`
 
-> 当 model = ref('') 时
+::: code-group
 
-- **template:**
-
-```vue
+```vue [template]
 <a v-model="model" />
 <b v-model.modifier="model" />
 <C v-model:argument.modifier="model" />
 ```
 
-- **jsx/tsx:**
-
-```jsx
+```tsx [jsx/tsx]
 <A v-model={model.value} />
 <B v-model={[model.value, ['modifier']]} />
 <C v-model={[model.value, 'argument', ['modifier']]} />
 ```
 
-- **renderFunction:**
-
-```jsx
+```jsx [renderFunction]
 h('A', { modelValue: model.value, 'onUpdate:modelValue': (v) => (model.value = v) })
 h('B', {
   modelValue: model.value,
@@ -199,3 +177,5 @@ h('C', {
   'onUpdate:argument': (v) => (model.value = v),
 })
 ```
+
+:::
