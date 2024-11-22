@@ -89,6 +89,7 @@ export const sidebar = () => {
             link: 'vue3-built-in-instructions-transform-jsx',
           },
           { text: 'Vue3 toRefs 源码分析', link: 'vue3-to-refs-source-code-parsing' },
+          { text: 'Vue3 中 v-model 的背后逻辑', link: 'vue3-tsx-vmodel' },
         ],
       },
       {
