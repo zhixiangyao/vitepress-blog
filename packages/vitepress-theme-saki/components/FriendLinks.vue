@@ -19,9 +19,7 @@ const yuque = {
   </svg>`,
 }
 
-defineOptions({
-  name: 'FriendLinks',
-})
+defineOptions({ name: 'FriendLinks' })
 
 type Props = { members: DefaultTheme.TeamMember[] }
 

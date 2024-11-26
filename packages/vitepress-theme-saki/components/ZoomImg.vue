@@ -3,9 +3,7 @@ import { withBase } from 'vitepress'
 import { onMounted, ref } from 'vue'
 import mediumZoom from 'medium-zoom'
 
-defineOptions({
-  name: 'ZooImg',
-})
+defineOptions({ name: 'ZooImg' })
 
 type Props = {
   src: string

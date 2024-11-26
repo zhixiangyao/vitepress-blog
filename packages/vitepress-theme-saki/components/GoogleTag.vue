@@ -2,9 +2,7 @@
 import { onMounted } from 'vue'
 import { loadExternalResource } from '../tools'
 
-defineOptions({
-  name: 'GoogleTag',
-})
+defineOptions({ name: 'GoogleTag' })
 
 const gtag = (...args: any[]) => {
   window.dataLayer.push(args)

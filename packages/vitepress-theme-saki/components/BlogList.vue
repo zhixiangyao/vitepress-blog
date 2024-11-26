@@ -2,6 +2,8 @@
 import { DefaultTheme, useData } from 'vitepress'
 import { computed } from 'vue'
 
+defineOptions({ name: 'BlogList' })
+
 const { theme } = useData()
 
 type Sidebar = [string, DefaultTheme.SidebarItem[]][]

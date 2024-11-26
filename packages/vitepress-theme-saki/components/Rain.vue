@@ -4,9 +4,7 @@ import { useData } from 'vitepress'
 
 import { loadExternalResource } from '../tools'
 
-defineOptions({
-  name: 'Rain',
-})
+defineOptions({ name: 'Rain' })
 
 type BG = {
   desktopDark: string
