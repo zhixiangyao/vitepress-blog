@@ -1,10 +1,10 @@
 # [译] 利用 `React 18` 中引入的 `startTransition` API，即使在大屏幕更新时也能保持 `React` 应用程序的响应速度
 
+::: warning
 
-::: warning 
 本问内容为翻译 `Chetan Gawai` 的 [`Keep the React app responsive even during large screen updates with startTransition API introduced in React 18`](https://blog.saeloun.com/2021/09/09/react-18-introduces-startTransition-api/)
-:::
 
+:::
 
 `React 18` 最重要的更新是并发渲染。并发是指通过确定任务的优先级来同时执行多个任务的能力。`Dan Abramov` 通过一个简单的[电话类比](https://github.com/reactwg/react-18/discussions/46#discussioncomment-846786)很好地解释了这一概念。
 

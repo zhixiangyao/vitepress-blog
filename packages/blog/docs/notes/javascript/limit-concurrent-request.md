@@ -30,9 +30,9 @@ const concurrentRequest = (requestFns: RequestFn[], limit: number): void => {
 
 ```ts [Test]
 // 模拟一个异步请求函数
-const createRequest: CreateRequest = (delay) => {
+const createRequest: CreateRequest = delay => {
   return async () => {
-    const res = await new Promise((resolve) => {
+    const res = await new Promise(resolve => {
       setTimeout(() => resolve('done'), delay)
     })
     console.log(res)

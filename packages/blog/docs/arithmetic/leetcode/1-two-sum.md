@@ -1,4 +1,4 @@
-# 第1题-两数之和
+# 第 1 题-两数之和
 
 ## [题目描述](https://leetcode.cn/problems/two-sum/)
 
