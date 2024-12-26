@@ -1,7 +1,7 @@
 <script lang="ts" setup>
 import VPSwitch from 'vitepress/dist/client/theme-default/components/VPSwitch.vue'
 
-type Props = {
+interface Props {
   checked: boolean
   onChange: () => void
 }

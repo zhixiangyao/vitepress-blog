@@ -9,7 +9,7 @@ const state = reactive({
   msg: '',
 })
 
-const getToken = (text: string) => {
+function getToken(text: string) {
   const CV = text
   const pin = CV.match(/pt_pin=.+?;/)?.[0] ?? ''
   const key = CV.match(/pt_key=.+?;/)?.[0] ?? ''
@@ -17,14 +17,15 @@ const getToken = (text: string) => {
   return CookieValue
 }
 
-const filter = () => {
+function filter() {
   const cookieValue = getToken(state.cookie)
 
   if (cookieValue) {
     state.filteredJDCookie = encodeURI(cookieValue)
     window.copy?.(state.filteredJDCookie)
     state.msg = '过滤成功'
-  } else {
+  }
+  else {
     state.filteredJDCookie = ''
     state.msg = '过滤失败'
   }
@@ -33,7 +34,8 @@ const filter = () => {
 watch(
   () => state.cookie,
   (cookie) => {
-    if (cookie) filter()
+    if (cookie)
+      filter()
   },
 )
 </script>
@@ -47,7 +49,7 @@ watch(
       placeholder="请把 cookie 黏贴到这里"
       cols="30"
       rows="10"
-    ></textarea>
+    />
 
     <div>Filtered JD Cookie: {{ state.msg ? ` (${state.msg})` : '' }}:</div>
     <code>{{ state.filteredJDCookie }}</code>

@@ -1,5 +1,6 @@
 <script setup lang="ts">
-import { DefaultTheme, useData } from 'vitepress'
+import type { DefaultTheme } from 'vitepress'
+import { useData } from 'vitepress'
 import { computed } from 'vue'
 
 defineOptions({ name: 'BlogList' })
@@ -12,7 +13,7 @@ const sidebar = computed(() => {
   return Object.entries(theme.value.sidebar) as Sidebar
 })
 
-const capitalized = (name: string) => {
+function capitalized(name: string) {
   const [str, ...rest] = name.replace('/', '').replace('\/', '')
 
   return str.toUpperCase() + rest.join('')

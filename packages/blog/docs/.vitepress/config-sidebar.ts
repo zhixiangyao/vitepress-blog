@@ -1,8 +1,8 @@
-import { type DefaultTheme } from 'vitepress'
+import type { DefaultTheme } from 'vitepress'
 
 type Sidebar = DefaultTheme.Config['sidebar']
 
-export const sidebar = () => {
+export function sidebar() {
   return {
     '/moments/': [
       { text: '空は高く風は歌う', base: '/moments/', link: '空は高く風は歌う' },

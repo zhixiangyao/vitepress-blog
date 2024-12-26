@@ -6,7 +6,8 @@ function loadExternalResource(url: string, type: 'css' | 'js') {
       tag = document.createElement('link')
       tag.rel = 'stylesheet'
       tag.href = url
-    } else if (type === 'js') {
+    }
+    else if (type === 'js') {
       tag = document.createElement('script')
       tag.src = url
     }
@@ -26,4 +27,4 @@ function b64ToUtf8(str: string) {
   return decodeURIComponent(window.atob(str))
 }
 
-export { loadExternalResource, utf8ToB64, b64ToUtf8 }
+export { b64ToUtf8, loadExternalResource, utf8ToB64 }

@@ -1,6 +1,11 @@
 <script setup lang="ts">
-import { VPTeamMembers, DefaultTheme } from 'vitepress/theme'
+import type { DefaultTheme } from 'vitepress/theme'
+import { VPTeamMembers } from 'vitepress/theme'
 import { computed } from 'vue'
+
+defineOptions({ name: 'FriendLinks' })
+
+const props = defineProps<Props>()
 
 const yuque = {
   svg: `
@@ -19,11 +24,7 @@ const yuque = {
   </svg>`,
 }
 
-defineOptions({ name: 'FriendLinks' })
-
-type Props = { members: DefaultTheme.TeamMember[] }
-
-const props = defineProps<Props>()
+interface Props { members: DefaultTheme.TeamMember[] }
 
 const members = computed(() => {
   return props.members.map((member) => {

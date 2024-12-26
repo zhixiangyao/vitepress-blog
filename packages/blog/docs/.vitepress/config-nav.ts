@@ -1,8 +1,8 @@
-import { type DefaultTheme } from 'vitepress'
+import type { DefaultTheme } from 'vitepress'
 
 type Nav = DefaultTheme.Config['nav']
 
-export const nav = (): Nav => {
+export function nav(): Nav {
   return [
     {
       text: 'Moments',

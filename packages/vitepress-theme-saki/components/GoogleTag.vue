@@ -4,10 +4,10 @@ import { loadExternalResource } from '../tools'
 
 defineOptions({ name: 'GoogleTag' })
 
-const gtag = (...args: any[]) => {
+function gtag(...args: any[]) {
   window.dataLayer.push(args)
 }
-const init = () => {
+function init() {
   window.dataLayer = window.dataLayer || []
   gtag('js', new Date())
   gtag('config', 'G-1E9XR885EH')

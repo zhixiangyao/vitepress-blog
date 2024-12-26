@@ -1,33 +1,35 @@
 <script setup lang="ts">
-import { onMounted, onBeforeUnmount, ref, watch } from 'vue'
 import { useData } from 'vitepress'
+import { onBeforeUnmount, onMounted, ref, watch } from 'vue'
 
 import { loadExternalResource } from '../tools'
 
 defineOptions({ name: 'Rain' })
 
-type BG = {
+const props = defineProps<Props>()
+
+interface BG {
   desktopDark: string
   desktopLight: string
   mobileDark: string
   mobileLight: string
 }
 
-type Props = {
+interface Props {
   bg: BG
 }
 
-const props = defineProps<Props>()
-
-const useRain = (bg: BG) => {
+function useRain(bg: BG) {
   const { isDark } = useData()
   const canvasRef = ref<HTMLCanvasElement>()
   let raindropFx: InstanceType<typeof window.RaindropFX>
   const url = 'https://yaozhixiang.top/assets/js/RaindropFX.js'
 
   const resizeRain = () => {
-    if (!canvasRef.value) return
-    if (!raindropFx) return
+    if (!canvasRef.value)
+      return
+    if (!raindropFx)
+      return
 
     const rect = canvasRef.value!.getBoundingClientRect()
 
@@ -35,19 +37,23 @@ const useRain = (bg: BG) => {
   }
 
   const switchRain = () => {
-    if (!raindropFx) return
+    if (!raindropFx)
+      return
     const body = document.body.getBoundingClientRect()
 
     if (isDark.value) {
       if (body.height > body.width) {
         raindropFx.setBackground(bg.mobileDark)
-      } else {
+      }
+      else {
         raindropFx.setBackground(bg.desktopDark)
       }
-    } else {
+    }
+    else {
       if (body.height > body.width) {
         raindropFx.setBackground(bg.mobileLight)
-      } else {
+      }
+      else {
         raindropFx.setBackground(bg.desktopLight)
       }
     }
@@ -73,13 +79,16 @@ const useRain = (bg: BG) => {
       if (isDark.value) {
         if (body.height > body.width) {
           background = bg.mobileDark
-        } else {
+        }
+        else {
           background = bg.desktopDark
         }
-      } else {
+      }
+      else {
         if (body.height > body.width) {
           background = bg.mobileLight
-        } else {
+        }
+        else {
           background = bg.desktopLight
         }
       }
@@ -92,7 +101,8 @@ const useRain = (bg: BG) => {
       raindropFx = new window.RaindropFX(option)
 
       raindropFx.start()
-    } catch (error) {
+    }
+    catch (error) {
       console.error(error)
     }
   }
@@ -127,6 +137,6 @@ const { canvasRef } = useRain(props.bg)
 
 <template>
   <Teleport to="body">
-    <canvas class="fixed inset-0 w-full h-full translate-x-0" ref="canvasRef" id="rain" />
+    <canvas id="rain" ref="canvasRef" class="fixed inset-0 w-full h-full translate-x-0" />
   </Teleport>
 </template>

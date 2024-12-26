@@ -1,14 +1,14 @@
-import DefaultTheme from 'vitepress/theme'
 import type { EnhanceAppContext, Theme } from 'vitepress'
+import DefaultTheme from 'vitepress/theme'
 
-import Layout from './Layout.vue'
-
-import FilterJDCookie from './components/FilterJDCookie.vue'
 import Base64 from './components/Base64.vue'
+
 import BlogList from './components/BlogList.vue'
+import FilterJDCookie from './components/FilterJDCookie.vue'
+import FriendLinks from './components/FriendLinks.vue'
 import Rain from './components/Rain.vue'
 import ZoomImg from './components/ZoomImg.vue'
-import FriendLinks from './components/FriendLinks.vue'
+import Layout from './Layout.vue'
 
 const theme: Theme = {
   extends: DefaultTheme,

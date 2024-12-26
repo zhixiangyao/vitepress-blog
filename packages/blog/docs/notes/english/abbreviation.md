@@ -72,7 +72,7 @@
 
 - `TBD`：`To be determined`，待定。
 
-- `SKU`: `Stock Keeping Unit`，库存保管单位。
+- `SKU`: `Stock Keeping Unit`，库存保管单位。
 
 - `POS`： `Point of Sale`，销售点。
 

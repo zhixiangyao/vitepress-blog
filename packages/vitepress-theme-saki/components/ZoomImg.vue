@@ -1,18 +1,18 @@
 <script setup lang="ts">
+import mediumZoom from 'medium-zoom'
 import { withBase } from 'vitepress'
 import { onMounted, ref } from 'vue'
-import mediumZoom from 'medium-zoom'
 
 defineOptions({ name: 'ZooImg' })
 
-type Props = {
+const props = defineProps<Props>()
+
+interface Props {
   src: string
   width?: string
   height?: string
   style?: string
 }
-
-const props = defineProps<Props>()
 
 const imgRef = ref<HTMLImageElement>()
 
@@ -30,7 +30,7 @@ if (!import.meta.env.SSR) {
     :width="props.width"
     :height="props.height"
     :style="props.style"
-  />
+  >
 </template>
 
 <style>
