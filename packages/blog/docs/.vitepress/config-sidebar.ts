@@ -5,9 +5,10 @@ type Sidebar = DefaultTheme.Config['sidebar']
 export function sidebar() {
   return {
     '/moments/': [
-      { text: '空は高く風は歌う', base: '/moments/', link: '空は高く風は歌う' },
-      { text: '2023 新年快乐！', base: '/moments/', link: '2023-01-01' },
+      { text: '2024 🎄 圣诞快乐！', base: '/moments/', link: '2024-12-25' },
       { text: '过滤 Chrome Network', base: '/moments/', link: 'filter-chrome-network' },
+      { text: '2023 新年快乐！', base: '/moments/', link: '2023-01-01' },
+      { text: '空は高く風は歌う', base: '/moments/', link: '空は高く風は歌う' },
     ],
     '/notes/': [
       {
