@@ -1,10 +1,10 @@
 # [译] 了解 `React 18` 中为外部存储引入的新 Hook `useSyncExternalStore`
 
-<!-- prettier-ignore-start -->
+
 ::: warning 
 本问内容为翻译 `Chetan Gawai` 的 [`Meet the new hook useSyncExternalStore, introduced in React 18 for external stores`](https://blog.saeloun.com/2021/12/30/react-18-useSyncExternalStore-api/#external-store)
 :::
-<!-- prettier-ignore-end -->
+
 
 在深入了解 `useSyncExternalStore` API 之前，让我们先熟悉一下术语，这对理解新 `Hook` 很有帮助。
 

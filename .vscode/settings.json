@@ -11,5 +11,12 @@
     "vitepress"
   ],
   "typescript.tsdk": "node_modules/typescript/lib",
-  "vue.server.hybridMode": "typeScriptPluginOnly"
+  "eslint.useFlatConfig": true,
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": "explicit"
+  },
+  "css.customData": [".vscode/tailwindcss.json"],
+  "files.associations": {
+    "*.css": "tailwindcss"
+  }
 }

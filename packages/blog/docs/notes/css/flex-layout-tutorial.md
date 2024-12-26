@@ -1,9 +1,9 @@
-<!-- prettier-ignore-start -->
+
 ::: warning 
 说明:本章内容为博主在原教程基础上添加自己的学习笔记，来源
 <http://www.ruanyifeng.com/blog/2015/07/flex-grammar.html/>，教程版权归原作者所有。
 :::
-<!-- prettier-ignore-end -->
+
 
 # flex 布局教程
 

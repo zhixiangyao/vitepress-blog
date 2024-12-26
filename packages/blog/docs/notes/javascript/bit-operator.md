@@ -2,7 +2,7 @@
 
 操作时时转化为二进制数
 
-<!-- prettier-ignore-start -->
+
 ::: tip
 
 | 十进制 | 二进制 | 补 0 |
@@ -14,7 +14,7 @@
 | 16 | 0b10000 | 0b10000 |
 
 :::
-<!-- prettier-ignore-end -->
+
 
 ## 运算符
 
@@ -129,7 +129,7 @@ function swap({ a, b }) {
 }
 ```
 
-<!-- prettier-ignore-start -->
+
 ::: tip 位与操作解释:
 第一步：`a ^= b ---> a = (a ^ b)`
 
@@ -137,7 +137,7 @@ function swap({ a, b }) {
 
 第三步：`a ^= b ---> a = (a ^ b) ^ a = (a ^ a) ^ b = b`
 :::
-<!-- prettier-ignore-end -->
+
 
 ### 位操作判断奇偶数
 
@@ -159,8 +159,8 @@ function reversal(num) {
 }
 ```
 
-<!-- prettier-ignore-start -->
+
 ::: tip
 整数取反加 `1`，正好变成其对应的负数(补码表示)；负数取反加 `1`，则变为其原码，即正数
 :::
-<!-- prettier-ignore-end -->
+
