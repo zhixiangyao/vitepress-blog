@@ -14,7 +14,7 @@ export function nav(): Nav {
     },
     {
       text: 'Tools',
-      link: '/tools/filter-jd-cookie',
+      link: '/tools/base64',
     },
     {
       text: 'Arithmetic',

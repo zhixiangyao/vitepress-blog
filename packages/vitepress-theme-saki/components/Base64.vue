@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { reactive, ref, watch } from 'vue'
+
 import VPSwitch from './ui/VPSwitch.vue'
 
 defineOptions({ name: 'Base64' })
@@ -21,6 +22,7 @@ watch([() => state.input, () => decode.value], ([newInputValue, newSwValue]) => 
   <div class="flex flex-col flex-nowrap self-start">
     <div class="flex gap-5 my-3">
       <span class="w-24">{{ decode ? 'Base64 解码' : 'Base64 编码' }}</span>
+
       <VPSwitch :checked="decode" :on-change="() => (decode = !decode)" />
     </div>
 

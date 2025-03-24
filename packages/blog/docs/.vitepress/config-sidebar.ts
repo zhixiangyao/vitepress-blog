@@ -205,8 +205,8 @@ export function sidebar() {
       },
     ],
     '/tools/': [
-      { text: '过滤 JD Cookie', base: '/tools/', link: 'filter-jd-cookie' },
       { text: 'Base64', base: '/tools/', link: 'base64' },
+      { text: '过滤 JD Cookie', base: '/tools/', link: 'filter-jd-cookie' },
     ],
     '/arithmetic/': [
       { text: '排序算法', base: '/arithmetic/', link: 'sorting-algorithm' },
