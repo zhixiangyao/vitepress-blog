@@ -2,8 +2,8 @@
 import VPSwitch from 'vitepress/dist/client/theme-default/components/VPSwitch.vue'
 
 interface Props {
-  checked: boolean
-  onChange: () => void
+  checked?: boolean
+  onChange?: () => void
 }
 
 defineOptions({ name: 'VPSwitch' })

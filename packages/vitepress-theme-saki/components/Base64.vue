@@ -26,10 +26,10 @@ watch([() => state.input, () => decode.value], ([newInputValue, newSwValue]) => 
       <VPSwitch :checked="decode" :on-change="() => (decode = !decode)" />
     </div>
 
-    <textarea v-model="state.input" cols="30" rows="10" />
+    <textarea v-model="state.input" cols="30" rows="6" />
 
     <div>{{ decode ? '解码' : '编码' }}后结果:</div>
-    <code>{{ state.output }}</code>
+    <textarea :value="state.output" cols="30" rows="6" disabled />
   </div>
 </template>
 
