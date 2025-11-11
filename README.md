@@ -1,15 +1,22 @@
 # Vitepress Blog
 
-- VSCode Extension:
-
-  - [Code Spell Checker](https://marketplace.visualstudio.com/items?itemName=streetsidesoftware.code-spell-checker)
-  - [ESLint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint)
-  - [Stylelint](https://marketplace.visualstudio.com/items?itemName=stylelint.vscode-stylelint)
-
-- Use [pnpm](https://pnpm.io/) (Because pnpm's monorepo is used)
-
-  ```bash
-  npm i -g pnpm
-  ```
-
 - Preview: https://blog.yaozhixiang.top & https://zhixiangyao.github.io/
+
+## Preparatory Work
+
+- **Editor:**
+
+  - [VS Code](https://code.visualstudio.com/)
+
+- **VSCode Extension:**
+
+  - `ESLint`
+  - `Stylelint`
+  - `Tailwind CSS IntelliSense`
+
+- **Development ENV:**
+
+  - git => 2.39.0
+  - node => 24.11.0
+  - pnpm => 10.21.0
+
