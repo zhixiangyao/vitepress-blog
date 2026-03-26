@@ -35,16 +35,13 @@ pnpm dev
 # build blog docs
 pnpm build
 
-# build only changed workspace packages (vs main branch)
-pnpm build:affected
-
 # preview built blog docs
 pnpm preview
 ```
 
 ## Workflow Notes
 
-- Root scripts are orchestrated by Turborepo (`turbo run ...`) for scalable monorepo workflows.
+- Root scripts use pnpm workspace filtering (`pnpm --filter blog ...`) to target the blog app.
 - Workspace package matching now supports both `packages/**` and `apps/**` for future expansion.
 - `apps/blog` uses standard `dev/build/preview` scripts, which aligns better with common monorepo task runners.
 
