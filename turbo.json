@@ -1,0 +1,23 @@
+{
+  "$schema": "https://turborepo.com/schema.json",
+  "tasks": {
+    "dev": {
+      "cache": false,
+      "persistent": true,
+      "dependsOn": ["^build"]
+    },
+    "build": {
+      "dependsOn": ["^build"],
+      "inputs": ["$TURBO_DEFAULT$", "!README.md", "!**/README.md"],
+      "outputs": ["dist/**"]
+    },
+    "vitepress-theme-saki#build": {
+      "outputs": []
+    },
+    "preview": {
+      "cache": false,
+      "persistent": true,
+      "dependsOn": ["build"]
+    }
+  }
+}

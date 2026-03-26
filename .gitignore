@@ -1,23 +1,29 @@
-node_modules
-dist
-*-lock.yaml
+# dependencies
+node_modules/
 
-# System generated
-.DS_Store
+# build / cache
+dist/
+out/
+.turbo/
+.cache/
+.vite/
+coverage/
+generated/
 
-# Log files
+# typescript
+*.tsbuildinfo
+next-env.d.ts
+
+# logs
+*.log
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 pnpm-debug.log*
 
-# Editor directories and files
-.idea
-*.suo
-*.ntvs*
-*.njsproj
-*.sln
-*.sw?
+# editor / OS
+.idea/
+.DS_Store
 
-# Cached files
-.vite
+# local-only
+pnpm-lock.yaml

@@ -3,5 +3,8 @@
   "type": "module",
   "version": "0.1.0",
   "author": "zhixiangyao",
-  "main": "index.ts"
+  "main": "index.ts",
+  "scripts": {
+    "build": "node -e \"console.log('vitepress-theme-saki is source-only; skip build output')\""
+  }
 }

@@ -1,3 +1,11 @@
+catalogMode: prefer
+
+cleanupUnusedCatalogs: true
+
+shellEmulator: true
+
+trustPolicy: high-risk-only
+
 packages:
-  # all packages in subDirs of packages/
-  - 'packages/*'
+  - packages/**
+  - apps/**

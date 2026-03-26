@@ -16,7 +16,35 @@
 
 - **Development ENV:**
 
-  - git => 2.39.0
-  - node => 24.11.0
-  - pnpm => 10.21.0
+  - node => 24.14.1
+  - pnpm => 10.33.0
+
+## Start
+
+```bash
+# install pnpm to manage packages
+npm install --global pnpm
+
+# install dependencies
+cd vitepress-blog
+pnpm install
+
+# start blog docs
+pnpm dev
+
+# build blog docs
+pnpm build
+
+# build only changed workspace packages (vs main branch)
+pnpm build:affected
+
+# preview built blog docs
+pnpm preview
+```
+
+## Workflow Notes
+
+- Root scripts are orchestrated by Turborepo (`turbo run ...`) for scalable monorepo workflows.
+- Workspace package matching now supports both `packages/**` and `apps/**` for future expansion.
+- `apps/blog` uses standard `dev/build/preview` scripts, which aligns better with common monorepo task runners.
 
