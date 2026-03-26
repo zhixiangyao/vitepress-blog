@@ -41,7 +41,7 @@ pnpm preview
 
 ## Workflow Notes
 
-- Root scripts use pnpm workspace filtering (`pnpm --filter blog ...`) to target the blog app.
-- Workspace package matching now supports both `packages/**` and `apps/**` for future expansion.
-- `apps/blog` uses standard `dev/build/preview` scripts, which aligns better with common monorepo task runners.
+- The repository is a single VitePress blog app rooted at this directory.
+- Custom theme components are colocated in `docs/.vitepress/theme`.
+- Run `pnpm dev`, `pnpm build`, and `pnpm preview` directly at root.
 

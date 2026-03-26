@@ -1,6 +1,7 @@
 {
   "name": "vitepress-blog",
   "private": true,
+  "type": "module",
   "packageManager": "pnpm@10.33.0",
   "description": "Blog",
   "author": "zhixiangyao <blueskyzx@icloud.com> <https://github.com/zhixiangyao>",
@@ -14,48 +15,29 @@
     "blog",
     "vitepress",
     "vue",
-    "pnpm",
-    "monorepo"
+    "pnpm"
   ],
   "engines": {
     "node": ">=24.14.1",
     "pnpm": ">=10.33.0"
   },
   "scripts": {
-    "dev": "pnpm --filter blog dev",
-    "build": "pnpm --filter blog build",
-    "preview": "pnpm --filter blog preview",
-    "------- 🌕 FORMAT -------": "",
-    "lint": "eslint --cache --cache-location node_modules/.cache/eslint/",
-    "lint:css": "stylelint --fix \"./**/*.{vue,postcss,css}\" --cache --cache-location node_modules/.cache/stylelint/",
-    "lint-staged": "lint-staged"
+    "dev": "vitepress dev docs",
+    "build": "vitepress build docs",
+    "preview": "vitepress serve docs"
   },
   "devDependencies": {
-    "@antfu/eslint-config": "catalog:",
-    "@types/node": "catalog:",
-    "@typescript-eslint/eslint-plugin": "catalog:",
-    "autoprefixer": "catalog:",
-    "eslint": "catalog:",
-    "lint-staged": "catalog:",
-    "medium-zoom": "catalog:",
-    "postcss": "catalog:",
-    "postcss-html": "catalog:",
-    "stylelint": "catalog:",
-    "stylelint-config-recommended-vue": "catalog:",
-    "stylelint-config-standard": "catalog:",
-    "stylelint-order": "catalog:",
-    "tailwindcss": "catalog:",
-    "typescript": "catalog:",
-    "vite": "catalog:",
-    "vitepress": "catalog:",
-    "vue": "catalog:"
+    "autoprefixer": "10.4.22",
+    "medium-zoom": "1.1.0",
+    "postcss": "8.5.6",
+    "tailwindcss": "3.4.17",
+    "vitepress": "2.0.0-alpha.12",
+    "vue": "3.5.24"
   },
-  "lint-staged": {
-    "*": [
-      "eslint --cache --cache-location node_modules/.cache/eslint/"
-    ],
-    "./**/*.{vue,postcss,css}": [
-      "npx stylelint --fix --cache --cache-location node_modules/.cache/stylelint/"
-    ]
+  "postcss": {
+    "plugins": {
+      "tailwindcss": {},
+      "autoprefixer": {}
+    }
   }
 }

@@ -3,7 +3,7 @@ export default {
   content: [
     './docs/.vitepress/**/*.vue',
     './docs/**/*.md',
-    '../vitepress-theme-saki/**/*.vue',
-    '../vitepress-theme-saki/**/*.ts',
+    './docs/.vitepress/theme/**/*.vue',
+    './docs/.vitepress/theme/**/*.ts',
   ],
 }
