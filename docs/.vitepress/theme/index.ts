@@ -1,25 +1,18 @@
-import './index.css'
-
 import type { EnhanceAppContext, Theme } from 'vitepress'
 import DefaultTheme from 'vitepress/theme'
 
-import Base64 from './components/Base64.vue'
 import BlogList from './components/BlogList.vue'
-import FilterJDCookie from './components/FilterJDCookie.vue'
 import FriendLinks from './components/FriendLinks.vue'
 import Rain from './components/Rain.vue'
 import ZoomImg from './components/ZoomImg.vue'
 import Layout from './Layout.vue'
+import './index.css'
 
 const theme: Theme = {
   extends: DefaultTheme,
   enhanceApp(ctx: EnhanceAppContext): void {
-    // extend default theme custom Behaviour.
     DefaultTheme.enhanceApp(ctx)
 
-    // register your custom global components
-    ctx.app.component('FilterJDCookie', FilterJDCookie)
-    ctx.app.component('Base64', Base64)
     ctx.app.component('BlogList', BlogList)
     ctx.app.component('Rain', Rain)
     ctx.app.component('ZoomImg', ZoomImg)

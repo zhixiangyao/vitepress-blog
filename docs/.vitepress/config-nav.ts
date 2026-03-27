@@ -13,10 +13,6 @@ export function nav(): Nav {
       link: '/notes/typescript/covariant-contravariant-invariant',
     },
     {
-      text: 'Tools',
-      link: '/tools/base64',
-    },
-    {
       text: 'Arithmetic',
       link: '/arithmetic/sorting-algorithm',
     },
