@@ -10,14 +10,7 @@
 
 - **VSCode Extension:**
 
-  - `ESLint`
-  - `Stylelint`
   - `Tailwind CSS IntelliSense`
-
-- **Development ENV:**
-
-  - node => 24.14.1
-  - pnpm => 10.33.0
 
 ## Start
 

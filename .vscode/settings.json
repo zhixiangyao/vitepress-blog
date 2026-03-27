@@ -1,20 +1,6 @@
 {
-  "files.exclude": {},
   "css.validate": false,
-  "cSpell.words": [
-    "Behaviour",
-    "Concat",
-    "docsearch",
-    "frontmatter",
-    "keyof",
-    "typeof",
-    "vitepress"
-  ],
   "js/ts.tsdk.path": "node_modules/typescript/lib",
-  "eslint.useFlatConfig": true,
-  "editor.codeActionsOnSave": {
-    "source.fixAll.eslint": "explicit"
-  },
   "css.customData": [".vscode/tailwindcss.json"],
   "files.associations": {
     "*.css": "tailwindcss"

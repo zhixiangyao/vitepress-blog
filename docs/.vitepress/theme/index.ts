@@ -1,4 +1,4 @@
-import './tailwind.postcss'
+import './index.css'
 
 import type { EnhanceAppContext, Theme } from 'vitepress'
 import DefaultTheme from 'vitepress/theme'
@@ -12,20 +12,20 @@ import ZoomImg from './components/ZoomImg.vue'
 import Layout from './Layout.vue'
 
 const theme: Theme = {
-	extends: DefaultTheme,
-	enhanceApp(ctx: EnhanceAppContext): void {
-		// extend default theme custom Behaviour.
-		DefaultTheme.enhanceApp(ctx)
+  extends: DefaultTheme,
+  enhanceApp(ctx: EnhanceAppContext): void {
+    // extend default theme custom Behaviour.
+    DefaultTheme.enhanceApp(ctx)
 
-		// register your custom global components
-		ctx.app.component('FilterJDCookie', FilterJDCookie)
-		ctx.app.component('Base64', Base64)
-		ctx.app.component('BlogList', BlogList)
-		ctx.app.component('Rain', Rain)
-		ctx.app.component('ZoomImg', ZoomImg)
-		ctx.app.component('FriendLinks', FriendLinks)
-	},
-	Layout,
+    // register your custom global components
+    ctx.app.component('FilterJDCookie', FilterJDCookie)
+    ctx.app.component('Base64', Base64)
+    ctx.app.component('BlogList', BlogList)
+    ctx.app.component('Rain', Rain)
+    ctx.app.component('ZoomImg', ZoomImg)
+    ctx.app.component('FriendLinks', FriendLinks)
+  },
+  Layout,
 }
 
 export default theme

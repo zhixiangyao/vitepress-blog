@@ -3,15 +3,12 @@ node_modules/
 
 # build / cache
 dist/
-out/
+.temp/
 .cache/
 .vite/
-coverage/
-generated/
 
 # typescript
 *.tsbuildinfo
-next-env.d.ts
 
 # logs
 *.log
@@ -26,3 +23,5 @@ pnpm-debug.log*
 
 # local-only
 pnpm-lock.yaml
+yarn.lock
+package-lock.json

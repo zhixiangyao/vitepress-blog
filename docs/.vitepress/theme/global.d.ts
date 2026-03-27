@@ -45,17 +45,13 @@ interface RenderOptions {
 interface RaindropFXOptions extends SimulatorOptions, RenderOptions {}
 
 declare class RaindropFX {
-  public options: Options
-  public renderer: RaindropRenderer
-  public simulator: RaindropSimulator
-
   constructor(options: Partial<RaindropFXOptions> & { canvas: HTMLCanvasElement })
 
   resize(w: number, h: number): void
 
   start(): void
 
-  async setBackground(background: string): Promise<void>
+  setBackground(background: string): Promise<void>
 }
 
 declare global {
