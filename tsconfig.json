@@ -1,18 +1,13 @@
 {
   "compilerOptions": {
-    "target": "ES2020",
-    "module": "ESNext",
-    "moduleResolution": "Bundler",
-    "lib": ["ES2020", "DOM", "DOM.Iterable"],
+    "target": "es2020",
+    "module": "esnext",
+    "moduleResolution": "bundler",
+    "lib": ["es2020", "dom"],
     "types": ["node", "vitepress/client"],
-    "strict": true,
-    "baseUrl": "./docs/.vitepress/",
-    "skipLibCheck": true
+    "skipLibCheck": true,
+    "rootDir": "./docs/.vitepress",
   },
-  "include": [
-    "docs/.vitepress/**/*.ts",
-    "docs/.vitepress/**/*.d.ts",
-    "docs/.vitepress/**/*.vue"
-  ],
-  "exclude": ["node_modules", "docs/.vitepress/dist"]
+  "include": ["docs/.vitepress/**/*.ts", "docs/.vitepress/**/*.d.ts", "docs/.vitepress/**/*.vue"],
+  "exclude": ["node_modules", "dist"]
 }
