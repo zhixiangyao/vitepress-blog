@@ -1,13 +1,13 @@
 {
   "compilerOptions": {
-    "target": "es2020",
+    "target": "esnext",
     "module": "esnext",
     "moduleResolution": "bundler",
-    "lib": ["es2020", "dom"],
+    "lib": ["esnext", "dom"],
     "types": ["node", "vitepress/client"],
     "skipLibCheck": true,
     "rootDir": "./docs/.vitepress",
   },
-  "include": ["docs/.vitepress/**/*.ts", "docs/.vitepress/**/*.d.ts", "docs/.vitepress/**/*.vue"],
+  "include": ["/**/*.ts", "docs/.vitepress/**/*.d.ts", "docs/.vitepress/**/*.vue"],
   "exclude": ["node_modules", "dist"]
 }

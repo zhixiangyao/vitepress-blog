@@ -17,7 +17,7 @@
   ],
   "scripts": {
     "dev": "vitepress dev docs",
-    "build": "vitepress build docs",
+    "build": "npm run typecheck && vitepress build docs",
     "preview": "vitepress serve docs",
     "typecheck": "vue-tsc --noEmit"
   },
