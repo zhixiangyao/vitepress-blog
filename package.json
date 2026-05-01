@@ -5,9 +5,14 @@
   "description": "Blog",
   "author": "zhixiangyao <blueskyzx@icloud.com> <https://github.com/zhixiangyao>",
   "homepage": "https://github.com/zhixiangyao/vitepress-blog",
+  "packageManager": "pnpm@11.0.3",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/zhixiangyao/vitepress-blog.git"
+  },
+    "engines": {
+    "node": ">=25.9.0",
+    "pnpm": ">=11.0.3"
   },
   "keywords": [
     "zhixiangyao",
@@ -17,7 +22,7 @@
   ],
   "scripts": {
     "dev": "vitepress dev docs",
-    "build": "npm run typecheck && vitepress build docs",
+    "build": "pnpm typecheck && vitepress build docs",
     "preview": "vitepress serve docs",
     "typecheck": "vue-tsc --noEmit"
   },
