@@ -5,6 +5,7 @@ type Sidebar = DefaultTheme.Config['sidebar']
 export function sidebar() {
   return {
     '/moments/': [
+      { text: '今年我当爸爸了', base: '/moments/', link: '2026-05-22' },
       { text: '2024 🎄 圣诞快乐！', base: '/moments/', link: '2024-12-25' },
       { text: '过滤 Chrome Network', base: '/moments/', link: 'filter-chrome-network' },
       { text: '2023 新年快乐！', base: '/moments/', link: '2023-01-01' },
