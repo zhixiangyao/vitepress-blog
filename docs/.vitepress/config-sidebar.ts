@@ -124,6 +124,12 @@ export function sidebar() {
         ],
       },
       {
+        text: 'NestJS',
+        collapsed: true,
+        base: '/notes/nestjs/',
+        items: [{ text: '从 0️⃣ 开始探索 NestJS 全栈开发', link: 'nestjs-fullstack-development' }],
+      },
+      {
         text: 'CSS',
         collapsed: true,
         base: '/notes/css/',
