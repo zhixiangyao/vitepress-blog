@@ -5,17 +5,18 @@
 ## 📜 Target
 
 - 🚶 The first step is as good as half over
-- 🚀 2024 Goals:
+- 🚀 ~~2024~~ ~~2025~~ 2026 Goals:
   - Learn English
   - Learn TypeScript@latest
   - Learn Vue@latest
   - Learn React@latest
   - Limit weight to 70KG
+  - Training pull-ups
   - ~~Smooth muscle up~~ (I can't do one now. 💔)
 - ❤️ Fun fact:
-  - Anime
+  - ~~Anime~~ (It's been a long time since I last watched it. 😮‍💨)
   - Movie
-  - Dota2 & 蛋仔派对 (dàn zǎi pài duì - Egg party)
+  - ~~Dota2 & 蛋仔派对 (dàn zǎi pài duì - Egg party)~~ (I need to take care of the kids. 👶)
   - Work out
 
 ## 📜 Project
