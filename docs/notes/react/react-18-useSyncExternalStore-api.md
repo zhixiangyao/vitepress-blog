@@ -167,7 +167,7 @@ const App = () => {
 
 :::
 
-<ZoomImg src="/use_sync_external_store.gif" width="326"  />
+<video src="/use_sync_external_store.mp4" width="326" autoplay muted loop playsinline></video>
 
 如果我们在代码的某个地方使用 `startTransition`，可能会导致撕裂。为了解决撕裂问题，我们现在可以使用 `useSyncExternalStore` `API`。
 

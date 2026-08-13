@@ -21,14 +21,17 @@
     "vue"
   ],
   "scripts": {
-    "dev": "vitepress dev docs",
+    "dev": "vitepress dev docs --host ",
     "build": "pnpm typecheck && vitepress build docs",
     "preview": "vitepress serve docs",
-    "typecheck": "vue-tsc --noEmit -p tsconfig.json"
+    "typecheck": "vue-tsc --noEmit -p tsconfig.json",
+    "optimize:images": "node scripts/optimize-images.mjs",
+    "optimize:gifs": "node scripts/optimize-gifs.mjs"
   },
   "devDependencies": {
     "@types/node": "26.2.0",
     "medium-zoom": "1.1.0",
+    "sharp": "^0.35.3",
     "tailwindcss": "3.4.17",
     "typescript": "6.0.3",
     "vitepress": "2.0.0-alpha.17",

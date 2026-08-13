@@ -8,6 +8,6 @@
     "skipLibCheck": true,
     "rootDir": "./docs/.vitepress",
   },
-  "include": ["/**/*.ts", "docs/.vitepress/**/*.d.ts", "docs/.vitepress/**/*.vue"],
+  "include": ["docs/.vitepress/**/*.ts", "docs/.vitepress/**/*.d.ts", "docs/.vitepress/**/*.vue"],
   "exclude": ["node_modules", "dist"]
 }

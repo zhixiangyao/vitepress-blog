@@ -6,7 +6,7 @@
 
 [Online Preview](/scroll-progress-timeline.html){target="\_self"}
 
-<ZoomImg src="/scroll_progress_timeline.gif" width="250" height="418" />
+<video src="/scroll_progress_timeline.mp4" width="250" height="418" autoplay muted loop playsinline></video>
 
 ## 滚动进度时间线（Scroll progress timeline）
 

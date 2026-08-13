@@ -17,10 +17,10 @@ hero:
 <ClientOnly>
   <Rain
     :bg="{
-      desktopDark: 'home-bg-images/desktop_dark_girl.png',
-      desktopLight: 'home-bg-images/desktop_light_girl.png',
-      mobileDark: 'home-bg-images/mobile_dark_girl.jpeg',
-      mobileLight: 'home-bg-images/mobile_light_girl.jpeg',
+      desktopDark: 'home-bg-images/desktop_dark_girl.webp',
+      desktopLight: 'home-bg-images/desktop_light_girl.webp',
+      mobileDark: 'home-bg-images/mobile_dark_girl.webp',
+      mobileLight: 'home-bg-images/mobile_light_girl.webp',
     }" 
   />
 </ClientOnly>
