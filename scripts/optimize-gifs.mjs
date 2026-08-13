@@ -1,5 +1,4 @@
-// GIF 转 MP4 脚本:把 docs/public 下的大 gif 转成 h264 mp4(体积可缩小 90%+),
-// 转换后需要手动删除原 gif 并更新文章引用为 <video>。
+// GIF 转 MP4 脚本: 把 docs/public 下的大 gif 转成 h264 mp4(体积可缩小 90%+), 转换后需要手动删除原 gif 并更新文章引用为 <video>
 // 用法: pnpm optimize:gifs
 import { execFileSync } from 'node:child_process'
 import { readdirSync, statSync } from 'node:fs'
@@ -54,4 +53,4 @@ for (const gif of gifs) {
   )
 }
 
-console.log('\n转换完成。请检查视频内容,确认后删除原 gif 并更新文章引用。')
+console.log('\n转换完成, 请检查视频内容, 确认后删除原 gif 并更新文章引用.')

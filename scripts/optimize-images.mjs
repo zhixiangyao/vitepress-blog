@@ -1,5 +1,4 @@
-// 图片优化脚本:压缩 docs/public 下超过阈值的 png/jpg,
-// 并对首页背景图额外生成 webp 版本。
+// 图片优化脚本:压缩 docs/public 下超过阈值的 png/jpg, 并对首页背景图额外生成 webp 版本
 // 用法: pnpm optimize:images
 import { existsSync, readdirSync, statSync, writeFileSync, rmSync } from 'node:fs'
 import { dirname, extname, join, resolve } from 'node:path'
@@ -10,7 +9,7 @@ const root = resolve(dirname(fileURLToPath(import.meta.url)), '..')
 const publicDir = join(root, 'docs/public')
 const THRESHOLD = 60 * 1024 // 60KB 以下的跳过
 
-// 首页背景图:额外生成 webp 并删除原文件(引用在 index.md 中同步更新)
+// 首页背景图: 额外生成 webp 并删除原文件(引用在 index.md 中同步更新)
 const WEBP_TARGETS = [
   'home-bg-images/desktop_dark_girl.png',
   'home-bg-images/desktop_light_girl.png',
@@ -55,7 +54,7 @@ for (const file of files) {
   }
 
   if (best.length >= size)
-    continue // 压缩无效,保留原图
+    continue // 压缩无效, 保留原图
 
   writeFileSync(file, best)
   after += best.length
