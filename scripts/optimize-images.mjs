@@ -1,4 +1,4 @@
-// 图片优化脚本:压缩 docs/public 下超过阈值的 png/jpg, 并对首页背景图额外生成 webp 版本
+// 图片优化脚本: 压缩 docs/public 下超过阈值的 png/jpg, 并对首页背景图额外生成 webp 版本
 // 用法: pnpm optimize:images
 import { existsSync, readdirSync, statSync, writeFileSync, rmSync } from 'node:fs'
 import { dirname, extname, join, resolve } from 'node:path'
@@ -7,7 +7,7 @@ import sharp from 'sharp'
 
 const root = resolve(dirname(fileURLToPath(import.meta.url)), '..')
 const publicDir = join(root, 'docs/public')
-const THRESHOLD = 60 * 1024 // 60KB 以下的跳过
+const THRESHOLD = 100 * 1024 // 100KB 以下的跳过
 
 // 首页背景图: 额外生成 webp 并删除原文件(引用在 index.md 中同步更新)
 const WEBP_TARGETS = [
