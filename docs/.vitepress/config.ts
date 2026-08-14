@@ -1,7 +1,7 @@
 import { defineConfig } from 'vitepress'
 
-import { nav } from './config-nav'
-import { sidebar } from './config-sidebar'
+import { nav } from './config-nav.ts'
+import { sidebar } from './config-sidebar.ts'
 
 const iconString = {
   leetcode:

@@ -7,6 +7,8 @@
     "types": ["node", "vitepress/client"],
     "skipLibCheck": true,
     "rootDir": "./docs/.vitepress",
+    "noEmit": true,
+    "allowImportingTsExtensions": true,
   },
   "include": ["docs/.vitepress/**/*.ts", "docs/.vitepress/**/*.d.ts", "docs/.vitepress/**/*.vue"],
   "exclude": ["node_modules", "dist"]
