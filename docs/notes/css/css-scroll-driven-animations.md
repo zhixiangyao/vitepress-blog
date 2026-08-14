@@ -4,7 +4,7 @@
 
 ## Demo
 
-[Online Preview](/scroll-progress-timeline.html){target="\_self"}
+[Online Preview](/scroll-progress-timeline.html){target="_self"}
 
 <video src="/scroll_progress_timeline.mp4" width="250" height="418" autoplay muted loop playsinline></video>
 
