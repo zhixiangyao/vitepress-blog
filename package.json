@@ -20,7 +20,8 @@
     "vue"
   ],
   "scripts": {
-    "dev": "vitepress dev docs --host ",
+    "dev": "vitepress dev docs --host",
+    "dev:code-server": "vitepress dev docs --host --base=/absproxy/5174/",
     "build": "pnpm typecheck && vitepress build docs",
     "preview": "vitepress serve docs",
     "typecheck": "vue-tsc --noEmit -p tsconfig.json",

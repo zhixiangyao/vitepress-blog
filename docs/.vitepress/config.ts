@@ -59,4 +59,10 @@ export default defineConfig({
     ['meta', { name: 'theme-color', content: '#ffffff', media: '(prefers-color-scheme: light)' }],
     ['meta', { name: 'theme-color', content: '#1b1b1f', media: '(prefers-color-scheme: dark)' }],
   ],
+
+  vite: {
+    server: {
+      allowedHosts: true,
+    },
+  },
 })
